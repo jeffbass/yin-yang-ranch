@@ -11,8 +11,8 @@ science project to build living soil, capture rain in barrels, and grow a
 variety of plants and fruit trees that can feed birds, bees, butterflies and
 people. We are in Southern California about 10 miles from the Malibu coast.
 Drought and limited rainfall are the toughest climate issues. Monitoring and
-observation are important, so we built a Raspberry PiCamera system to read the
-water meter and monitor temperatures to optimize irrigation. We can send a
+observation are important, so I built a Raspberry PiCamera system to read the
+water meter and monitor temperatures to optimize irrigation. I can send a
 text message to the system ("Susan") to ask about water usage or temperatures:
 
 .. image:: docs/images/text-messages.jpg
@@ -21,26 +21,26 @@ text message to the system ("Susan") to ask about water usage or temperatures:
 
 This repository contains the software and the hardware designs used to build
 our measurement and monitoring systems. **yin-yang-ranch** is a continuously
-evolving project with a lot of hardware hacking and software refactoring.  We
+evolving project with a lot of hardware hacking and software refactoring.  I
 are open-sourcing everything in case it might be helpful to others.
-Our projects use Raspberry Pi computers, PiCameras, various sensors and related
-electronics. We control the hardware with Python programs that use computer
-vision, OpenCV, Numpy, pandas, the PyZMQ messaging library. We use the
+My projects use Raspberry Pi computers, PiCameras, various sensors and related
+electronics. I control the hardware with Python programs that use computer
+vision, OpenCV, Numpy, pandas, the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigaion valves.
 
-We currently have 2 repositories on GitHub: this one (just a few docs so far)
+I currently have 2 repositories on GitHub: this one (just a few docs so far)
 and
 `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
-We wrote **imagezmq** to move images taken by Raspberry Pi computers to hub computers
-for image processing. We use a variety of computer vision techniques implemented
-in Python. We have programs that can read the water meter. Or tell if that
+I wrote **imagezmq** to move images taken by Raspberry Pi computers to hub computers
+for image processing. I use a variety of computer vision techniques implemented
+in Python. I have programs that can read the water meter. Or tell if that
 critter moving behind the barn is a coyote or a racoon.
 
-We also have a website at `yin-yang-ranch.com <https://www.yin-yang-ranch.com/>`_
+I also have a website at `yin-yang-ranch.com <https://www.yin-yang-ranch.com/>`_
 that will display some dashboards on weather, compost temperatures,
 solar power generation and when the last coyote was spotted. It is mostly a few
-pictures of the ranch for now as we are developing the dashboard software.
+pictures of the ranch for now as I am developing the dashboard software.
 
 .. contents::
 
@@ -67,14 +67,15 @@ Software Stack
 
 - Python 3.5 and 3.6
 - OpenCV 3.3
-- Raspian Stretch and Raspian Jessie (mostly Jessie)
+- Raspian Stretch and Raspian Jessie (mostly Stretch)
 - PyZMQ 16.0
 - imutils 0.4.3 (used get to images from PiCamera)
 
 Hardware and Electronics
 ========================
 
-The project uses a wide variety of electronic hardware:
+The project uses a wide variety of electronics hardware:
+
 - Raspberry Pi computers with both PiCameras and webcams
 - Mac and Linux laptops (some with webcams)
 - Temperature and humidity sensors
