@@ -5,14 +5,14 @@ yin-yang-ranch: Software & Raspberry Pis that Manage a Farm
 Introduction
 ============
 
-**yin-yang-ranch** is a collection of Python programs and Rasperry Pi hardware
-to help manage a small urban permaculture farm. The 2 acre farm is an ongoing
-science project to build living soil, capture rain in barrels, and grow a
-variety of plants and fruit trees that can feed birds, bees, butterflies and
-people. We are in Southern California about 10 miles from the Malibu coast.
-Drought and limited rainfall are the toughest climate issues. Monitoring and
-observation are important, so I built a Raspberry PiCamera system to read the
-water meter and monitor temperatures to optimize irrigation. I can send a
+This repository is a collection of Python programs and Rasperry Pi hardware
+projects to help manage a small urban permaculture farm called **Yin Yang Ranch**.
+The 2 acre farm is an ongoing science project to build living soil, capture rain
+in barrels, and grow a variety of plants and fruit trees that can feed birds,
+bees, butterflies and people. We are in Southern California about 10 miles from
+the Malibu coast. Drought and limited rainfall are the toughest climate issues.
+Monitoring and observation are important, so I built a Raspberry PiCamera system
+to read the water meter and monitor temperatures to optimize irrigation. I can send a
 text message to the system ("Susan") to ask about water usage or temperatures:
 
 .. image:: docs/images/text-messages.jpg
@@ -25,7 +25,7 @@ evolving project with a lot of hardware hacking and software refactoring.  I
 am open-sourcing everything in case it might be helpful to others.
 My projects use Raspberry Pi computers, PiCameras, various sensors and related
 electronics. I control the hardware with Python programs that use computer
-vision, OpenCV, Numpy, pandas, the PyZMQ messaging library. I use the
+vision, OpenCV, Numpy, pandas, and the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigaion valves.
 
@@ -40,7 +40,7 @@ critter moving behind the barn is a coyote or a racoon.
 I also have a website at `yin-yang-ranch.com <https://www.yin-yang-ranch.com/>`_
 that will display some dashboards on weather, compost temperatures,
 solar power generation and when the last coyote was spotted. It is mostly a few
-pictures of the ranch for now as I am developing the dashboard software.
+pictures of the ranch for now while I am developing the dashboard software.
 
 .. contents::
 
@@ -62,6 +62,30 @@ techniques to label a coyote or a racoon in an image stream.
 
 .. image:: docs/images/CVpipeline.png
 
+The project contains code repositories for each part of the design shown above:
+
+- **imagenode**: image capture on Raspberry Pi and other computers using PiCameras,
+  webcams and various OpenCV techniques for image rotation, threshholding,
+  dilation, differencing and motion detection.
+- **imagezmq**: Python classes that transport OpenCV images from imagenodes to
+  imagehubs.
+- **imagehub**: Python programs that gather images and sensor data from multiple
+  Raspberry Pi and other computers via imagezmq.
+- **librarian**: Python programs that index and store images, as well as perform
+  additional image processing including feature extractoin, image and object
+  classification and creating text descriptions and summaries.
+- **commhub**: Python programs that provide a natural language interface for asking
+  various questions about the images (is the water running? was a coyote sighted
+  today?) using data compiled by the librarian
+- **commagents**: Python programs that connect various communication channels to
+  the commhub, including an SMS/texting agent (example shown above), an email
+  agent, a webchat agent and an agent to keep the Yin Yang Ranch dashboard
+  updated.
+- **yin-yang-ranch**: Overall project documentation and design. Also contains
+  Python programs that manage operations, like monitoring the health status of
+  all the subsystems, including electrical power and internet access. Also
+  contains system startup scripts in bash and systemd service files.
+
 Software Stack
 ==============
 
@@ -76,13 +100,17 @@ Hardware and Electronics
 
 The project uses a wide variety of electronics hardware:
 
-- Raspberry Pi computers with both PiCameras and webcams
-- Mac and Linux laptops (some with webcams)
-- Temperature and humidity sensors
-- Lighting control electroncis (e.g., to light the water meter)
-- Motion detection sensors (both PIR and ultrasonic)
-- Infrared lighting arrays (to watch for coyotes and raccoons)
-- Irrigation actuators to turn water on and off
+- Raspberry Pi computers with both PiCameras and webcams.
+- Mac and Linux laptops (some with webcams).
+- Temperature and humidity sensors.
+- Lighting control electroncis (e.g., to light the water meter).
+- Motion detection sensors (both PIR and ultrasonic).
+- Infrared lighting arrays (to watch for coyotes and raccoons).
+- Irrigation actuators to turn water on and off.
+- Solar panel monitoring hardware with programs to optimize power use and track
+  the daily, monthly and annual sunshine energy reaching the farm. Hours and
+  intensity of sunlight are big factors in photosynthesis, plant growth rates
+  and water requirements.
 
 Water Meter Hardware Example
 ----------------------------
@@ -100,27 +128,40 @@ digit of the digital meter to advance by one digit. The small "blue star" dial
 is a "leak detector" that spins even when a very small amount of water is
 flowing (like a dripping faucet). This a great project for a Raspberry Pi,
 **imagezmq** and a Mac (or Linux computer). More details about the hardware
-and software can be found at `Water Meter Details <docs/water-meter.rst>`_
+and software can be found in the **imagezmq** repository at
+`imagezmq Water Meter Description <https://github.com/jeffbass/imagezmq/blob/master/docs/imagezmq-uses.rst>`_
 
 Coyote Cam and Temperature Sensor
 ---------------------------------
-The description of the camera behind the barn goes here.
-Including infrared lighting ring and lighting control.
+The description of the camera behind the barn will go here.
+Including infrared lighting and lighting control.
 
 Garage Cam
 ----------
-The description of the camera that watches the garage goes here.
+The description of the camera that watches the garage will go here.
 Including white lighting and lighting control.
 
 Roadmap for Future Development
 ==============================
-What's next?
+The **yin-yang-ranch** projects are in very early development and testing.
+Prototypes for all the modules in the design diagram above are working, and the
+early experiments have provided a lot of data to help with design
+changes and code refactoring. I have pushed the **imagezmq** module to GitHub.
+I expect to push the **imagenode** and **imagehub** modules by mid 2018. The
+**librarian** and communications programs will follow later in the year.
+Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
+repository over the summer and fall of 2018.
 
-Additional Documentation
-========================
-- `More details about the multiple RPi video streaming example <docs/more-details.rst>`_
-- `Using imagezmq in distributed computer vision projects <docs/imagezmq-uses.rst>`_
-- `API and Usage Examples <docs/api-examples.rst>`_
+The `imagezmq repository <https://github.com/jeffbass/imagezmq>`_
+contains test programs that show how images can be sent from multiple Raspberry
+Pi computers simultaneously to a hub computer. The **imagenode** and **imagehub**
+programs are evolutions of
+`timing_send_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_send_jpg_buf.py>`_
+and
+`timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
+The Python code in those two programs is almost a "pseudo code" outline for the
+code that is currently in the prototypes of the **imagenode** and **imagehub**
+programs.
 
 Contributing
 ============
@@ -129,10 +170,10 @@ questions, open issues and pull requests, but because the programs are still
 evolving, it is best to open a pull request with some discussion before
 submitting code changes.  Open an issue to ask a question about the project.
 
-Acknowledgments
-===============
+Acknowledgments and Thank Yous
+==============================
 - **The Raspberry Pi Foundation** and their remarkable Raspberry Pi tiny single
-  computers. Even their $10 Pi Zero runs Linux and OpenCV and can do serious
+  board computers. Even their $10 Pi Zero runs Linux and OpenCV and can do serious
   computer vision image acquisition and processing.
   `Raspberry Pi Foundation <https://www.raspberrypi.org/>`_
 - **Adafruit** an amazing resource for electronics makers with helpful tutorials and
