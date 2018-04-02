@@ -22,7 +22,7 @@ text message to the system ("Susan") to ask about water usage or temperatures:
 This repository contains the software and the hardware designs used to build
 our measurement and monitoring systems. **yin-yang-ranch** is a continuously
 evolving project with a lot of hardware hacking and software refactoring.  I
-are open-sourcing everything in case it might be helpful to others.
+am open-sourcing everything in case it might be helpful to others.
 My projects use Raspberry Pi computers, PiCameras, various sensors and related
 electronics. I control the hardware with Python programs that use computer
 vision, OpenCV, Numpy, pandas, the PyZMQ messaging library. I use the
@@ -60,7 +60,7 @@ Pi computers simultaneously. It can perform more complex image processing like
 reading the changing digits of the water meter or using image classification
 techniques to label a coyote or a racoon in an image stream.
 
-.. image:: docs/images/design-drawing.jpg
+.. image:: docs/images/CVpipeline.png
 
 Software Stack
 ==============
