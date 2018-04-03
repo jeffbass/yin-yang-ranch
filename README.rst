@@ -131,15 +131,17 @@ flowing (like a dripping faucet). This a great project for a Raspberry Pi,
 and software can be found in the **imagezmq** repository at
 `imagezmq Water Meter Description <https://github.com/jeffbass/imagezmq/blob/master/docs/imagezmq-uses.rst>`_
 
+TODO: add hardware diagrams and photos
+
 Coyote Cam and Temperature Sensor
 ---------------------------------
-The description of the camera behind the barn will go here.
-Including infrared lighting and lighting control.
+TODO: The description of the camera behind the barn will go here.
+Including infrared lighting and lighting control. Add hardware diagrams and photos.
 
 Garage Cam
 ----------
-The description of the camera that watches the garage will go here.
-Including white lighting and lighting control.
+TODO: The description of the camera that watches the garage will go here.
+Including white lighting and lighting control. Add hardware diagrams and photos.
 
 Roadmap for Future Development
 ==============================
@@ -152,6 +154,15 @@ I expect to push the **imagenode** and **imagehub** modules by mid 2018. The
 Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
 repository over the summer and fall of 2018.
 
+There are many styles and choices about "when to push to GitHub" and when to share a
+project with the open source community. I am choosing to share my projects early
+in the development cycle, which means there is no code in this repository yet.
+My style is to write design and documentation first, then prototype the code and
+then iterate. So my first drafts and beta repositories contain documentation
+and design and TODO scaffolding before they contain code. I push them in these
+early stages to share them with collaborators (and with friends and relatives
+who wonder what IS that guy doing in retirement?).
+
 The `imagezmq repository <https://github.com/jeffbass/imagezmq>`_
 contains test programs that show how images can be sent from multiple Raspberry
 Pi computers simultaneously to a hub computer. The **imagenode** and **imagehub**
@@ -159,7 +170,7 @@ programs are evolutions of
 `timing_send_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_send_jpg_buf.py>`_
 and
 `timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
-The Python code in those two programs is almost a "pseudo code" outline for the
+The Python code in those two programs is a brief "pseudo code" outline for the
 code that is currently in the prototypes of the **imagenode** and **imagehub**
 programs.
 
