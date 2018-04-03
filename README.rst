@@ -1,5 +1,5 @@
 ===========================================================
-yin-yang-ranch: Software & Raspberry Pis that Manage a Farm
+yin-yang-ranch: Software & Raspberry Pis help manage a farm
 ===========================================================
 
 Introduction
@@ -11,7 +11,7 @@ The 2 acre farm is an ongoing science project to build living soil, capture rain
 in barrels, and grow a variety of plants and fruit trees that can feed birds,
 bees, butterflies and people. We are in Southern California about 10 miles from
 the Malibu coast. Drought and limited rainfall are the toughest climate issues.
-Monitoring and observation are important, so I built a Raspberry PiCamera system
+Monitoring and observation are important, so I built a Raspberry Pi Camera system
 to read the water meter and monitor temperatures to optimize irrigation. I can send a
 text message to the system ("Susan") to ask about water usage or temperatures:
 
@@ -28,8 +28,8 @@ vision, OpenCV, Numpy, pandas, and the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigaion valves.
 
-I currently have 2 repositories on GitHub: this one (just a few docs so far)
-and
+I currently have 2 repositories on GitHub: this one (which has just a few docs
+so far) and
 `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 I wrote **imagezmq** to move images taken by Raspberry Pi computers to hub computers
 for image processing. I use a variety of computer vision techniques implemented
@@ -47,7 +47,8 @@ The Overall Design
 ==================
 
 The overall system design is a hub and spoke network with ZMQ messaging between
-Raspberry PiCameras and imagehubs. A librarian program stores images and extracted
+Raspberry PiCameras and imagehubs. One image hub can simultaneously receive
+images from about 10 PiCameras. A librarian program stores images and extracted
 image features in a database. A communications program uses the database to
 answer queries about images and events, as shown in the SMS text exchange pictured
 above. By distributing computer vision processing pipelines across Raspberry Pi
@@ -57,7 +58,9 @@ camera settings, control additional lighting, crop, flip and grayscale images,
 as well as detect motion. A Mac can store and index images from many Raspberry
 Pi computers simultaneously. It can perform more complex image processing like
 reading the changing digits of the water meter or using image classification
-techniques to label a coyote or a racoon in an image stream.
+techniques to label a coyote or a racoon in an image stream. My current setup has
+about a dozen Raspberry Pis with PiCamera modules and 2 linux laptops with webcams
+attached to a single imagehub.
 
 .. image:: docs/images/CVpipeline.png
 
@@ -175,10 +178,9 @@ programs.
 
 Contributing
 ============
-The **yin-yang-ranch** projects are in very early development and testing. I welcome
-questions, open issues and pull requests, but because the programs are still
-evolving, it is best to open a pull request with some discussion before
-submitting code changes.  Open an issue to ask a question about the project.
+The **yin-yang-ranch** projects are in very early development and testing. I
+welcome questions and comments.  The easiest way to make a comment or ask a
+question about the project is to open an issue.
 
 Acknowledgments and Thank Yous
 ==============================
