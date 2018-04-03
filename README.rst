@@ -15,9 +15,8 @@ Monitoring and observation are important, so I built a Raspberry PiCamera system
 to read the water meter and monitor temperatures to optimize irrigation. I can send a
 text message to the system ("Susan") to ask about water usage or temperatures:
 
-.. image:: docs/images/text-messages.jpg
-   :height: 700px
-   :align: center
+.. image:: docs/images/text-messages.png
+
 
 This repository contains the software and the hardware designs used to build
 our measurement and monitoring systems. **yin-yang-ranch** is a continuously
