@@ -20,7 +20,7 @@ from tools.utils import clean_shutdown_when_killed
 
 class HealthMonitor:
     def __init__(self, settings):
-        print('HealthMonitor got the settings')
+        assert sys.version_info >= (3,5)
         self.sys_type = self.get_sys_type()
 
     def get_sys_type(self):
@@ -54,7 +54,7 @@ def main():
     log = logging.getLogger()
     handler = logging.handlers.RotatingFileHandler('nodehealth.log',
         maxBytes=15000, backupCount=5)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(message)s')
+    formatter = logging.Formatter('%(asctime)s ~ %(message)s')
     handler.setFormatter(formatter)
     log.addHandler(handler)
     log.setLevel(logging.DEBUG)
@@ -73,6 +73,7 @@ def main():
         log.warning('Ctrl-C was pressed or SIGTERM was received.')
     except Exception as ex:
         log.exception('Unanticipated error with no Exception handler.')
+        print('Traceback error:', ex)
     finally:
         log.info('Exited nodehealth.py')
         sys.exit()
