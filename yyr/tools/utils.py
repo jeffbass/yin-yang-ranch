@@ -1,24 +1,24 @@
-"""utils: various utility functions used by imagenode
+"""utils: various utility functions used by imagenode and imagehub
 
 Copyright (c) 2017 by Jeff Bass.
 License: MIT, see LICENSE for more details.
 """
-
-import logging
 import signal
-
-log = logging.getLogger(__name__)
+import logging
 
 def clean_shutdown_when_killed(signum, *args):
-    ''' This will close all connections cleanly
-        and make sure the Kill or SIGTERM is logged
-        and will make sure the finally clause is executed
-    '''
+    """Close all connections cleanly and log shutdown
+    This function will be called when SIGTERM is received from OS
+    or if the program is killed by "kill" command. It then raises
+    KeyboardInterrupt to close all resources and log the shutdown.
+    """
     logging.warning("SIGTERM detected, shutting down")
-    raise KeyboardInterrupt # this works well from inside the main forever loop
+    raise KeyboardInterrupt
 
-class Timeout():
-    """Timeout class using ALARM signal."""
+class Patience:
+    """Timing class using system ALARM signal.
+    See main event loop in Imagenode.py for Usage Example
+    """
     class Timeout(Exception):
         pass
 
@@ -33,9 +33,4 @@ class Timeout():
         signal.alarm(0)    # disable alarm
 
     def raise_timeout(self, *args):
-        raise Timeout.Timeout()
-
-class Settings():
-    """Load settings. During testing using assignment; later using YAML file"""
-    def __init__(self):
-        self.logfile = 'logs/nodehealth.log'
+        raise Patience.Timeout()

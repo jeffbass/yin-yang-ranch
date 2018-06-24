@@ -10,24 +10,49 @@
     License: MIT, see LICENSE for more details.
     """
 
-import logging
-import logging.handlers
+import sys
 import signal
 import socket
-import sys
+import logging
+import logging.handlers
+import platform
 from tools.utils import clean_shutdown_when_killed
-from tools.utils import Settings
+
+class HealthMonitor:
+    def __init__(self, settings):
+        print('HealthMonitor got the settings')
+        self.sys_type = self.get_sys_type()
+
+    def get_sys_type(self):
+        uname = platform.uname()
+        if uname.system == 'Darwin':
+            return 'Mac'
+        elif uname.system == 'Linux':
+            with open('/etc/os-release') as f:
+                osrelease = f.read()
+                if 'raspbian' in osrelease.lower():
+                    return 'RPi'
+                elif 'ubuntu' in osrelease.lower():
+                    return 'Ubuntu'
+                else:
+                    return 'Linux'
+        else:
+            return 'Unknown'
+
+    def reboot_this_computer(self):
+        if self.sys_type == 'RPi':  # reboot only if RPi
+            print('This is a mock reboot.')
+
+    def check_ping(self, address='192.168.1.1'):
+        return 'OK'  # for testing
 
 def main():
     # set up controlled shutdown when Kill Process or SIGTERM received
     signal.signal(signal.SIGTERM, clean_shutdown_when_killed)
 
-    # load settings for nodehealth abbreviated as nh
-    nh = Settings()
-
     # start logging
     log = logging.getLogger()
-    handler = logging.handlers.RotatingFileHandler(nh.logfile,
+    handler = logging.handlers.RotatingFileHandler('nodehealth.log',
         maxBytes=15000, backupCount=5)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(message)s')
     handler.setFormatter(formatter)
@@ -38,6 +63,12 @@ def main():
         log.info('Starting nodehealth.py')
         hostname = socket.gethostname()  # hostname of this computer
         print('This computer is', hostname)
+        settings = None
+        health = HealthMonitor(settings)
+        print('This computer is ', health.sys_type)
+        ping_OK = health.check_ping()
+        print('Ping Check is ', ping_OK)
+        health.reboot_this_computer()
     except (KeyboardInterrupt, SystemExit):
         log.warning('Ctrl-C was pressed or SIGTERM was received.')
     except Exception as ex:

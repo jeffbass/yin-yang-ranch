@@ -29,7 +29,7 @@ Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigaion valves.
 
 I currently have 2 repositories on GitHub: this one (which has just a few docs
-so far) and
+and code files so far) and
 `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 I wrote **imagezmq** to move images taken by Raspberry Pi computers to hub computers
 for image processing. I use a variety of computer vision techniques implemented
@@ -199,7 +199,9 @@ Acknowledgments and Thank Yous
   tutorials, code examples, blogs
   and books at `PyImageSearch.com <https://www.pyimagesearch.com/>`_. Installing
   OpenCV on my Raspberry Pi computers, Macs and Linux boxes went from
-  frustrating to easy thanks to his tutorials.
+  frustrating to easy thanks to his tutorials. I also learned a **LOT** about
+  computer vision methods and techniques by taking his PyImageSearch Gurus
+  course. Highly recommended.
 - **imutils** is a collection of Python classes and methods that allows computer
   vision programs using OpenCV to be cleaner and more compact. It has a very
   helpful threaded image reader for Raspberry PiCamera modules or webcams. It
