@@ -29,6 +29,7 @@ Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigation valves.
 
 I currently have 3 repositories on GitHub:
+
 1. this one (which has just a few docs and code files so far)
 2. `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
