@@ -5,7 +5,7 @@ yin-yang-ranch: Software & Raspberry Pis help manage a farm
 Introduction
 ============
 
-This repository is a collection of Python programs and Rasperry Pi hardware
+This repository is a collection of Python programs and Raspberry Pi hardware
 projects to help manage a small urban permaculture farm called **Yin Yang Ranch**.
 The 2 acre farm is an ongoing science project to build living soil, capture rain
 in barrels, and grow a variety of plants and fruit trees that can feed birds,
@@ -26,13 +26,17 @@ My projects use Raspberry Pi computers, PiCameras, various sensors and related
 electronics. I control the hardware with Python programs that use computer
 vision, OpenCV, Numpy, pandas, and the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
-meter) and irrigaion valves.
+meter) and irrigation valves.
 
-I currently have 2 repositories on GitHub: this one (which has just a few docs
-and code files so far) and
-`imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
-I wrote **imagezmq** to move images taken by Raspberry Pi computers to hub computers
-for image processing. I use a variety of computer vision techniques implemented
+I currently have 3 repositories on GitHub:
+1. this one (which has just a few docs and code files so far)
+2. `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
+3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
+
+**imagezmq** moves images taken by Raspberry Pi computers to hub computers
+for image processing. **imagenode** runs on multiple RPi computers, continuously
+capturing images, detecting motion, and gathering sensor data (e.g. air and
+soil temperatures). I use a variety of computer vision techniques implemented
 in Python. I have programs that can read the water meter. Or tell if that
 critter moving behind the barn is a coyote or a racoon.
 
@@ -64,13 +68,16 @@ attached to a single imagehub.
 
 .. image:: docs/images/CVpipeline.png
 
-The project contains code repositories for each part of the design shown above:
+The project contains code repositories for each part of the design shown above
+(but only 3 have been pushed to GitHub so far):
 
 - **imagenode**: image capture on Raspberry Pi and other computers using PiCameras,
   webcams and various OpenCV techniques for image rotation, threshholding,
   dilation, differencing and motion detection.
+  See `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 - **imagezmq**: Python classes that transport OpenCV images from imagenodes to
   imagehubs.
+  See `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 - **imagehub**: Python programs that gather images and sensor data from multiple
   Raspberry Pi and other computers via imagezmq.
 - **librarian**: Python programs that index and store images, as well as perform
@@ -86,7 +93,8 @@ The project contains code repositories for each part of the design shown above:
 - **yin-yang-ranch**: Overall project documentation and design. Also contains
   Python programs that manage operations, like monitoring the health status of
   all the subsystems, including electrical power and internet access. Also
-  contains system startup scripts in bash and systemd service files.
+  contains system startup scripts in bash and systemd service files. Currently,
+  only this bare bones stub is on GitHub.
 
 Software Stack
 ==============
@@ -150,11 +158,12 @@ Roadmap for Future Development
 The **yin-yang-ranch** projects are in very early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
-changes and code refactoring. I have pushed the **imagezmq** module to GitHub.
-I expect to push the **imagenode** and **imagehub** modules by mid 2018. The
-**librarian** and communications programs will follow later in the year.
+changes and code refactoring. I have pushed the **imagezmq** and **imagenode**
+repositories to GitHub.
+I expect to push the **imagehub** repository by December 2018. The
+**librarian** and communications programs will follow in early 2019.
 Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
-repository over the summer and fall of 2018.
+repository over the spring and summer of 2019.
 
 There are many styles and choices about "when to push to GitHub" and when to share a
 project with the open source community. I am choosing to share my projects early
