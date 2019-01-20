@@ -28,16 +28,19 @@ vision, OpenCV, Numpy, pandas, and the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigation valves.
 
-I currently have 3 repositories on GitHub:
+I currently have 4 repositories on GitHub:
 
 1. this one (which has just a few docs and code files so far)
 2. `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
+4. `imagehub: Receive and Store Images and Event Logs. <https://github.com/jeffbass/imagehub>`_
 
 **imagezmq** moves images taken by Raspberry Pi computers to hub computers
 for image processing. **imagenode** runs on multiple RPi computers, continuously
 capturing images, detecting motion, and gathering sensor data (e.g. air and
-soil temperatures). I use a variety of computer vision techniques implemented
+soil temperatures). **imagehub** runs on a Mac or a Linux computer and receives
+images and event messages from 8-10 Raspberry Pi computers simultaneously.
+I use a variety of computer vision techniques implemented
 in Python. I have programs that can read the water meter. Or tell if that
 critter moving behind the barn is a coyote or a racoon.
 
@@ -70,7 +73,7 @@ attached to a single imagehub.
 .. image:: docs/images/CVpipeline.png
 
 The project contains code repositories for each part of the design shown above
-(but only 3 have been pushed to GitHub so far):
+(The first 3 have been pushed to GitHub so far):
 
 - **imagenode**: image capture on Raspberry Pi and other computers using PiCameras,
   webcams and various OpenCV techniques for image rotation, threshholding,
@@ -81,8 +84,9 @@ The project contains code repositories for each part of the design shown above
   See `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 - **imagehub**: Python programs that gather images and sensor data from multiple
   Raspberry Pi and other computers via imagezmq.
+  See `imagehub: Receiving and saving images and event data from multiple Raspberry Pi's. <https://github.com/jeffbass/imagehub>`_
 - **librarian**: Python programs that index and store images, as well as perform
-  additional image processing including feature extractoin, image and object
+  additional image processing including feature extraction, image and object
   classification and creating text descriptions and summaries.
 - **commhub**: Python programs that provide a natural language interface for asking
   various questions about the images (is the water running? was a coyote sighted
@@ -114,7 +118,7 @@ The project uses a wide variety of electronics hardware:
 - Raspberry Pi computers with both PiCameras and webcams.
 - Mac and Linux laptops (some with webcams).
 - Temperature and humidity sensors.
-- Lighting control electroncis (e.g., to light the water meter).
+- Lighting control electronics (e.g., to light the water meter).
 - Motion detection sensors (both PIR and ultrasonic).
 - Infrared lighting arrays (to watch for coyotes and raccoons).
 - Irrigation actuators to turn water on and off.
