@@ -90,7 +90,7 @@ The project contains code repositories for each part of the design shown above
   classification and creating text descriptions and summaries.
 - **commhub**: Python programs that provide a natural language interface for asking
   various questions about the images (is the water running? was a coyote sighted
-  today?) using data compiled by the librarian
+  today?) using data compiled by the librarian.
 - **commagents**: Python programs that connect various communication channels to
   the commhub, including an SMS/texting agent (example shown above), an email
   agent, a webchat agent and an agent to keep the Yin Yang Ranch dashboard
@@ -144,7 +144,7 @@ is a "leak detector" that spins even when a very small amount of water is
 flowing (like a dripping faucet). This a great project for a Raspberry Pi,
 **imagezmq** and a Mac (or Linux computer). More details about the hardware
 and software can be found in the **imagezmq** repository at
-`imagezmq Water Meter Description <https://github.com/jeffbass/imagezmq/blob/master/docs/imagezmq-uses.rst>`_
+`imagezmq Water Meter Description <https://github.com/jeffbass/imagezmq/blob/master/docs/imagezmq-uses.rst>`_.
 
 TODO: add hardware diagrams and photos
 
@@ -163,10 +163,10 @@ Roadmap for Future Development
 The **yin-yang-ranch** projects are in very early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
-changes and code refactoring. I have pushed the **imagezmq** and **imagenode**
-repositories to GitHub.
-I expect to push the **imagehub** repository by December 2018. The
-**librarian** and communications programs will follow in early 2019.
+changes and code refactoring. I have pushed the **imagezmq**, **imagenode**
+and **imagehub** repositories to GitHub.
+
+The **librarian** and communications programs will follow in early 2019.
 Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
 repository over the spring and summer of 2019.
 
