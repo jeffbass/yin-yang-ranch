@@ -30,7 +30,7 @@ meter) and irrigation valves.
 
 I currently have 4 repositories on GitHub:
 
-1. this one (which has just a few docs and code files so far)
+1. **yin-yang-ranch**: this repository. Overall project design and goals.
 2. `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 4. `imagehub: Receive and Store Images and Event Logs. <https://github.com/jeffbass/imagehub>`_
@@ -120,7 +120,7 @@ The project uses a wide variety of electronics hardware:
 - Temperature and humidity sensors.
 - Lighting control electronics (e.g., to light the water meter).
 - Motion detection sensors (both PIR and ultrasonic).
-- Infrared lighting arrays (to watch for coyotes and raccoons).
+- Infrared lighting arrays (to watch for coyotes and raccoons at night).
 - Irrigation actuators to turn water on and off.
 - Solar panel monitoring hardware with programs to optimize power use and track
   the daily, monthly and annual sunshine energy reaching the farm. Hours and
