@@ -95,18 +95,36 @@ The project contains code repositories for each part of the design shown above
   the commhub, including an SMS/texting agent (example shown above), an email
   agent, a webchat agent and an agent to keep the Yin Yang Ranch dashboard
   updated.
-- **yin-yang-ranch**: Overall project documentation and design. Also contains
+- **yin-yang-ranch** (*this GitHub repository*): Overall project documentation
+  and design. Also contains
   Python programs that manage operations, like monitoring the health status of
-  all the subsystems, including electrical power and internet access. Also
-  contains system startup scripts in bash and systemd service files. Currently,
-  only this bare bones stub is on GitHub.
+  all the subsystems, including electrical power and internet access. Currently,
+  this repository is mostly documentation for the overall system and some
+  hardware descriptions and diagrams.
 
-Software Stack
-==============
+This distributed design allows each computer to do what it does best. A
+Raspberry Pi with a PiCamera can watch a water meter for needle motion, then
+transmit only those images show the water flow changes (from flowing
+to not flowing or vice versa). The logic for motion detection and image selection
+runs in the Raspberry Pi, which only sends selected, relevant images to the
+**imagehub**. The **imagehub** stores the event messages and images from
+multiple nodes at the same time. The **librarian** program does further analysis
+of the images and event messages, for example, using character extraction and
+recognition to read the numeric digits in the water meter and answer questions
+about water flow per day or per month. A more complete "which computer does
+what" explanation can be found in
+`Distributing tasks among the multiple computers. <docs/distributed-flow.rst>`_
+
+Software Stack for the entire system
+====================================
+
+The system is written in Python and uses these packages. Higher versions will
+usually work fine, but these specific ones are known to work. See each specific
+repository above for more software details.
 
 - Python 3.5 and 3.6
 - OpenCV 3.3
-- Raspian Stretch and Raspian Jessie (mostly Stretch)
+- Raspian Stretch
 - PyZMQ 16.0
 - imutils 0.4.3 (used get to images from PiCamera)
 
@@ -142,29 +160,27 @@ spins clockwise. Each full rotation of the needle causes the rightmost
 digit of the digital meter to advance by one digit. The small "blue star" dial
 is a "leak detector" that spins even when a very small amount of water is
 flowing (like a dripping faucet). This a great project for a Raspberry Pi,
-**imagezmq** and a Mac (or Linux computer). More details about the hardware
-and software can be found in the **imagezmq** repository at
-`imagezmq Water Meter Description <https://github.com/jeffbass/imagezmq/blob/master/docs/imagezmq-uses.rst>`_.
+**imagezmq** and a Mac (or Linux computer).
 
 TODO: add hardware diagrams and photos
 
-Coyote Cam and Temperature Sensor
----------------------------------
+Coyote Cam and Temperature Sensor Hardware Example
+--------------------------------------------------
 TODO: The description of the camera behind the barn will go here.
 Including infrared lighting and lighting control. Add hardware diagrams and photos.
 
-Garage Cam
-----------
+Driveway Cam Hardware Example
+-----------------------------
 TODO: The description of the camera that watches the garage will go here.
 Including white lighting and lighting control. Add hardware diagrams and photos.
 
 Roadmap for Future Development
 ==============================
-The **yin-yang-ranch** projects are in very early development and testing.
+The **yin-yang-ranch** projects are in early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
 changes and code refactoring. I have pushed the **imagezmq**, **imagenode**
-and **imagehub** repositories to GitHub.
+and **imagehub** repositories to GitHub (see links above).
 
 The **librarian** and communications programs will follow in early 2019.
 Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
@@ -188,7 +204,8 @@ and
 `timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
 The Python code in those two programs is a brief "pseudo code" outline for the
 code that is currently in the prototypes of the **imagenode** and **imagehub**
-programs.
+programs.  Links to the full **imagenode** and **imagehub** repositories are
+above.
 
 Contributing
 ============
