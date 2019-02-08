@@ -27,14 +27,13 @@ controls and sends alerts. When the water is flowing, the large analog needle
 spins clockwise. Each full rotation of the needle causes the rightmost
 digit of the digital meter to advance by one digit. The small "blue star" dial
 is a "leak detector" that spins even when a very small amount of water is
-flowing (like a dripping faucet). This a great project for a Raspberry Pi
-running **imagenode** and a Mac (or other Linux computer) running **imagehub**.
+flowing (like a dripping faucet).
 
 Here's what **imagenode** does on the Raspberry Pi:
 
-- The PiCamera gets warmed up and an LED is turned on to illuminate the water
-  meter (via the RPi GPIO pins).
-- Images of the water meter are taken at 10 frames per second.
+- The PiCamera gets warmed up and bank of LEDs is turned on to illuminate the
+  water meter (via the RPi GPIO pins).
+- Images of the water meter are taken at 16 frames per second.
 - The images are rotated, cropped and converted to grayscale.
 - The images are thresholded and dilated.
 - The images are pushed into a Queue as they are gathered.
@@ -44,18 +43,20 @@ Here's what **imagenode** does on the Raspberry Pi:
   along with a series of images that show when the status changed (from flowing
   to not flowing or vice-versa). To minimize network load, images are only sent
   when there has been a status change. The program logic to select which images
-  to send is running in the main thread on the Raspberry Pi.
+  to send is running in the main thread of the **imagenode** program on the
+  Raspberry Pi.
 
-Here's what **imagehub** does on the Mac:
+Here's what **imagehub** program does on the Mac:
 
 - The images are received via **imagezmq** along with the status messages.
-- The images are stored in an image database and indexed.
+- The images are stored in an image database.
+- The event messages are logged in an event log with date and time.
 
 The list of tasks done by the **imagehub** is limited by design. It can gather
 images and event messages from multiple Raspberry Pi **imagenode** computers
 if it does nothing other than receive snd store images and event messages.
 
-Here's what the **librarian** does on the Mac:
+Here's what the **librarian** program does on the Mac:
 
 - Several Regions of Interest (ROI) are extracted from each image and further
   processed:
@@ -96,21 +97,20 @@ which it is best suited:
   computers for each Mac (or Linux computer).
 
 In addition to using a Raspberry Pi to read the water meter, I have Raspberry
-Pis running similar software watching the garage and barn doors, watching the farm
+Pis running **imagenode** software watching the garage and barn doors, watching the farm
 for critters, tracking the weather and solar panels, etc. One Mac can easily
 act as a hub for 8 or more Raspberry Pi computers that are doing simple image
-processing, motion detection and sending a subset of gathered images. The Mac
-has enough processing power to do further image processing for all 8 Raspberry Pi
-image streams.
+processing, motion detection and sending a subset of gathered images.
 
-The code for the Raspberry Pi **imagenode** program is in this Github repository.
+The code for the Raspberry Pi **imagenode** program is in the
+`imagenode GitHub repository <https://github.com/jeffbass/imagenode.git>`_.
 The code for the **imagezmq** communication software that allows the node
 computers to communicate with the hub computer is in the
 `**imagezmq** GitHub repository <https://github.com/jeffbass/imagezmq>`_.
 The **imagehub** program is in the
 `imagehub GitHub repository <https://github.com/jeffbass/imagehub>`_.
-See the `Yin Yang Ranch project <https://github.com/jeffbass/yin-yang-ranch>`_.
-for more details about the architecture of the
-**imagenode <--> imagezmq <--> imagehub** system.
+
+Together they form the **imagenode <--> imagezmq <--> imagehub** distributed
+computer vision system.
 
 `Return to main documentation page README.rst <../README.rst>`_

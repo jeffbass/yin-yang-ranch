@@ -66,7 +66,7 @@ camera settings, control additional lighting, crop, flip and grayscale images,
 as well as detect motion. A Mac can store and index images from many Raspberry
 Pi computers simultaneously. It can perform more complex image processing like
 reading the changing digits of the water meter or using image classification
-techniques to label a coyote or a racoon in an image stream. My current setup has
+techniques to label a coyote or a raccoon in an image stream. My current setup has
 about a dozen Raspberry Pis with PiCamera modules and 2 linux laptops with webcams
 attached to a single imagehub.
 
@@ -105,14 +105,14 @@ The project contains code repositories for each part of the design shown above
 This distributed design allows each computer to do what it does best. A
 Raspberry Pi with a PiCamera can watch a water meter for needle motion, then
 transmit only those images show the water flow changes (from flowing
-to not flowing or vice versa). The logic for motion detection and image selection
-runs in the Raspberry Pi, which only sends selected, relevant images to the
-**imagehub**. The **imagehub** stores the event messages and images from
-multiple nodes at the same time. The **librarian** program does further analysis
-of the images and event messages, for example, using character extraction and
-recognition to read the numeric digits in the water meter and answer questions
-about water flow per day or per month. A more complete "which computer does
-what" explanation can be found in
+to not flowing or vice versa). The logic for motion detection and image
+selection runs in the Raspberry Pi, which only sends relevant images to the
+**imagehub**, saving network bandwidth. The **imagehub** stores the event
+messages and images from multiple nodes at the same time. The **librarian**
+program does further analysis of the images and event messages, for example,
+using character extraction and recognition to read the numeric digits in the
+water meter and answer questions about water flow per day or per month. A more
+complete "which computer does what" explanation can be found in
 `Distributing tasks among the multiple computers. <docs/distributed-flow.rst>`_
 
 Software Stack for the entire system
@@ -134,7 +134,7 @@ Hardware and Electronics
 The project uses a wide variety of electronics hardware:
 
 - Raspberry Pi computers with both PiCameras and webcams.
-- Mac and Linux laptops (some with webcams).
+- Mac and Linux laptops (some with webcams as nodes).
 - Temperature and humidity sensors.
 - Lighting control electronics (e.g., to light the water meter).
 - Motion detection sensors (both PIR and ultrasonic).
@@ -159,10 +159,17 @@ controls and sends alerts. When the water is flowing, the large analog needle
 spins clockwise. Each full rotation of the needle causes the rightmost
 digit of the digital meter to advance by one digit. The small "blue star" dial
 is a "leak detector" that spins even when a very small amount of water is
-flowing (like a dripping faucet). This a great project for a Raspberry Pi,
-**imagezmq** and a Mac (or Linux computer).
+flowing (like a dripping faucet).
 
-TODO: add hardware diagrams and photos
+The Raspberry Pi sits in a mason jar on top of the water meter cover. The
+PiCamera and the array of LED lights is underneath the water meter cover and
+aimed at the water meter face. Here is a picture water meter as seen by the
+PiCamera:
+
+.. image:: docs/images/water-meter-cam-view.jpg
+
+For more details on the water meter camera and LEDs hardware and layout, see
+`Water Meter Camera Hardware Details. <docs/water-meter-hardware.rst>`_
 
 Coyote Cam and Temperature Sensor Hardware Example
 --------------------------------------------------
