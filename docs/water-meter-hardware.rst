@@ -19,7 +19,7 @@ where the Raspberry Pi will go:
 To develop and test a prototype, I placed a Raspberry Pi, a PiCamera and a
 flashlight in the meter box (below the lid). I learned that any single point
 light source created a lot of glare and light flares on the water meter glass
-face. So I built an array of white LED's on a couple of prototyping circuit
+face. So I built an array of 24 white LED's on a two prototyping circuit
 boards. The LED's are controlled using RPi GPIO pin 18 and an N-channel
 MOSFET to control the higher current flow to the LED arrays. The LED array
 draws too much current to be controlled by the RPi GPIO pins directly. The
