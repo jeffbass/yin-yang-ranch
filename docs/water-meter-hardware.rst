@@ -11,29 +11,26 @@ getting construction and plumbing permits, doing major construction to dig up
 the supply line pipe and then cutting the pipe to install an in-line digital
 water meter.
 
-Here is what the meter box looks like:
+Here is what the water meter box lid looks like, with a Mason jar lid positioned
+where the Raspberry Pi will go:
 
 .. image:: images/water-meter-box-top.jpg
 
 To develop and test a prototype, I placed a Raspberry Pi, a PiCamera and a
 flashlight in the meter box (below the lid). I learned that any single point
 light source created a lot of glare and light flares on the water meter glass
-face. So I created an array of white LED's on a couple of prototyping circuit
+face. So I built an array of white LED's on a couple of prototyping circuit
 boards. The LED's are controlled using RPi GPIO pin 18 and an N-channel
 MOSFET to control the higher current flow to the LED arrays. The LED array
 draws too much current to be controlled by the RPi GPIO pins directly. The
-MOSFET circuit wiring looks like this:
+MOSFET circuit wiring prototype looks like this:
 
-.. image:: images/MOSFET-diagram.jpg
-
-The actual MOSFET and control wires to the GPIO pins look like this:
-
-.. image:: images/MOSFET-circuit-board.jpg
+.. image:: images/rpi-mosfet-led-prototype.jpg
 
 The LED arrays and camera are arranged on the underside of the water meter
 box cover:
 
-.. image:: images/LED-array-PiCamera.jpg
+.. image:: images/underside-picam-led-arrays.jpg
 
 A plastic Mason jar lid is bolted to the top of the water meter box cover.
 Holes are drilled through lid and the cover to allow the LED control wires and
@@ -43,12 +40,13 @@ passed out in the space between the Mason jar lid and the box cover.
 Finally, the Raspberry Pi and the MOSFET circuit are placed in a glass Mason
 jar that is screwed onto the lid. The final arrangement looks like this:
 
-.. image:: images/water-meter-box-top.jpg
+.. image:: images/meter-cover-rpi-installed.jpg
 
-This arrangement has been working on the house and farm main water line
-water meter for about 2 years and has never failed. The LED's are controlled
-by the **imagenode** software. Here is the imagenode.yaml file for the
-Water Meter:
+This arrangement has been working on our main water line
+water meter for about 2 years with very high reliability. The power cable is
+the only physical connection; all the images are sent via WiFi. The LED's are
+controlled by the **imagenode** software. Here is the imagenode.yaml file for
+the Water Meter, which shows the settings for the LEDs on GPIO pin 18:
 
 .. code-block:: yaml
 

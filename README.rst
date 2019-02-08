@@ -163,12 +163,12 @@ flowing (like a dripping faucet).
 
 The Raspberry Pi sits in a mason jar on top of the water meter cover. The
 PiCamera and the array of LED lights is underneath the water meter cover and
-aimed at the water meter face. Here is a picture water meter as seen by the
-PiCamera:
+aimed at the water meter face. Here is a picture of the water meter as seen by
+the PiCamera:
 
 .. image:: docs/images/water-meter-cam-view.jpg
 
-For more details on the water meter camera and LEDs hardware and layout, see
+For more details on the water meter camera electronics and buildout, see
 `Water Meter Camera Hardware Details. <docs/water-meter-hardware.rst>`_
 
 Coyote Cam and Temperature Sensor Hardware Example
