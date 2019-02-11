@@ -186,8 +186,9 @@ seen after dark:
 
 .. image:: docs/images/floodlight-cam-sensor.jpg
 
-For more details on the water meter camera electronics and buildout, see
-`Critter Infrared Camera Hardware Details. <docs/barn-hardware.rst>`_
+For more details on the infrared camera, infrared floodlight and temperature
+sensor, see
+`Critter Infrared Camera and Temperature Sensor Details. <docs/barn-hardware.rst>`_
 
 Driveway Cam Hardware Example
 -----------------------------

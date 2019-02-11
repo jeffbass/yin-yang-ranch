@@ -31,7 +31,7 @@ temperature probe cable are passed through holes drilled in the barn wall:
 
 The "PiNoir" PiCamera module is the same as the usual PiCamera module and uses
 the same ribbon cable to connect to the Raspberry Pi computer. However, the
-lens has no infrared coating. 
+lens has no infrared coating.
 Quoting from the Adafruit website: "The NoIR Camera has No InfraRed (NoIR) filter
 on the lens which makes it perfect for doing Infrared photography and taking
 pictures in low light (twilight) environments." Adafruit sells the
@@ -39,9 +39,10 @@ pictures in low light (twilight) environments." Adafruit sells the
 
 The temperature probe used is a waterproof DS18B20 digital temperature sensor,
 that is connected to GPIO pin 4 for signal (the other 2 wires are connected to
-the 3.3v pin and ground). The probe was purchased from Adafruit, which also
-has a great tutorial for reading the probe in Python. You can see the code I
-used for reading the sensor in the **imagenode** repository.
+the 3.3v pin and ground). The probe was purchased from
+`Adafruit for $10 <https://www.adafruit.com/product/381>`_. Adafruit also
+has a great tutorial for setting up and reading the probe in Python. You can see
+the code I used for reading the sensor in the **imagenode** repository.
 
 The infrared floodlight is not connected to the GPIO pins, because it has its
 own photocell that turns the floodlight on at night and off in the daytime.
