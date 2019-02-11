@@ -7,7 +7,7 @@ and detect motion of critters wandering about. Here is an **imagehub** log that
 shows motion detected behind the barn, along with a couple of pictures that were
 taken when the coyote activated the motion detection.
 
-.. image:: images/coyote-events.jpg
+.. image:: images/coyote-events.png
 
 Here is what the back of the barn looks like with the infrared "PiNoir"
 style PiCamera, a temperature sensor and the infrared floodlight that lights the
@@ -40,7 +40,6 @@ own photocell that turns the floodlight on at night and off in the daytime.
 I have tried multiple infrared floodlights and spotlights. The one I have had
 the best results with is an 8W IR floodlight available for
 `$30 on Amazon. <http://a.co/d/3FOUrCT>`_
-
 It sends out plenty of infrared light so that a PiNoir camera can see raccoons,
 rabbits and coyotes at night up to 20 feet away. Keep in mind that these 12V
 lights often come in Floodlight style or Spotlight style. For my uses (tracking

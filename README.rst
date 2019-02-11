@@ -178,7 +178,7 @@ of critters wandering about. Here is a log that shows motion detected behind
 the barn, along with a couple of pictures that were taken when the coyote
 activated the motion detection in the **imagenode** RPi running in the barn:
 
-.. image:: docs/images/coyote-events.jpg
+.. image:: docs/images/coyote-events.png
 
 Here is what the back of the barn looks like with the infrared "PiNoir"
 style PiCamera, a temperature sensor and the infrared floodlight that lights the
@@ -194,8 +194,8 @@ Driveway Cam Hardware Example
 TODO: The description of the camera that watches the garage will go here.
 Including white lighting and lighting control. Add hardware diagrams and photos.
 
-Roadmap for Future Development
-==============================
+Research and Development Roadmap
+================================
 The **yin-yang-ranch** projects are in early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
