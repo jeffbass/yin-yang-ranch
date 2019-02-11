@@ -182,7 +182,7 @@ activated the motion detection in the **imagenode** RPi running in the barn:
 
 Here is what the back of the barn looks like with the infrared "PiNoir"
 style PiCamera, a temperature sensor and the infrared floodlight that lights the
-seen after dark:
+area after dark without putting out white light:
 
 .. image:: docs/images/floodlight-cam-sensor.jpg
 
@@ -190,10 +190,17 @@ For more details on the infrared camera, infrared floodlight and temperature
 sensor, see
 `Critter Infrared Camera and Temperature Sensor Details. <docs/barn-hardware.rst>`_
 
-Driveway Cam Hardware Example
------------------------------
-TODO: The description of the camera that watches the garage will go here.
-Including white lighting and lighting control. Add hardware diagrams and photos.
+Driveway Cam Raspberry Pi Zero Hardware Example
+-----------------------------------------------
+Another PiCamera **imagenode** watches the driveway and entrance area. It sees
+the mail truck come and go, and spots an occasional hawk. It uses a Raspberry
+Pi Zero W computer and a PiCamera that are encased in a "fake security camera"
+housing that cost about $5:
+
+.. image:: docs/images/camera-housing.jpg
+
+For more details on the Pi Zero based driveway camera and its enclosure, see
+`Driveway Camera Hardware Example. <docs/driveway-hardware.rst>`_
 
 Research and Development Roadmap
 ================================
