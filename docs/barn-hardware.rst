@@ -1,6 +1,6 @@
-========================================
-Critter Infrared Camera Hardware Details
-========================================
+======================================================
+Critter Infrared Camera and Temperature Sensor Details
+======================================================
 
 The Raspberry Pi **imagenode** in the barn can monitor outside air temperature
 and detect motion of critters wandering about. Here is an **imagehub** log that
@@ -28,6 +28,14 @@ The Raspberry Pi is inside the barn and the PiCamera ribbon cable and the
 temperature probe cable are passed through holes drilled in the barn wall:
 
 .. image:: images/rpi-inside-barn.jpg
+
+The "PiNoir" PiCamera module is the same as the usual PiCamera module and uses
+the same ribbon cable to connect to the Raspberry Pi computer. However,
+
+Quoting from the Adafruit website: "The NoIR Camera has No InfraRed (NoIR) filter
+on the lens which makes it perfect for doing Infrared photography and taking
+pictures in low light (twilight) environments." Adafruit sells the
+`PiNoir camera <https://www.adafruit.com/product/3100>`_ module for $30.
 
 The temperature probe used is a waterproof DS18B20 digital temperature sensor,
 that is connected to GPIO pin 4 for signal (the other 2 wires are connected to
