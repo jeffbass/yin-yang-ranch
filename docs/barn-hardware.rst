@@ -30,8 +30,8 @@ temperature probe cable are passed through holes drilled in the barn wall:
 .. image:: images/rpi-inside-barn.jpg
 
 The "PiNoir" PiCamera module is the same as the usual PiCamera module and uses
-the same ribbon cable to connect to the Raspberry Pi computer. However,
-
+the same ribbon cable to connect to the Raspberry Pi computer. However, the
+lens has no infrared coating. 
 Quoting from the Adafruit website: "The NoIR Camera has No InfraRed (NoIR) filter
 on the lens which makes it perfect for doing Infrared photography and taking
 pictures in low light (twilight) environments." Adafruit sells the
