@@ -173,8 +173,21 @@ For more details on the water meter camera electronics and buildout, see
 
 Coyote Cam and Temperature Sensor Hardware Example
 --------------------------------------------------
-TODO: The description of the camera behind the barn will go here.
-Including infrared lighting and lighting control. Add hardware diagrams and photos.
+Raspberry Pi nodes around the farm can monitor temperature and detect motion
+of critters wandering about. Here is a log that shows motion detected behind
+the barn, along with a couple of pictures that were taken when the coyote
+activated the motion detection in the **imagenode** RPi running in the barn:
+
+.. image:: docs/images/coyote-events.jpg
+
+Here is what the back of the barn looks like with the infrared "PiNoir"
+style PiCamera, a temperature sensor and the infrared floodlight that lights the
+seen after dark:
+
+.. image:: docs/images/floodlight-cam-sensor.jpg
+
+For more details on the water meter camera electronics and buildout, see
+`Critter Infrared Camera Hardware Details. <docs/barn-hardware.rst>`_
 
 Driveway Cam Hardware Example
 -----------------------------
@@ -210,7 +223,7 @@ programs are evolutions of
 and
 `timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
 The Python code in those two programs is a brief "pseudo code" outline for the
-code that is currently in the prototypes of the **imagenode** and **imagehub**
+code that is in the **imagenode** and **imagehub**
 programs.  Links to the full **imagenode** and **imagehub** repositories are
 above.
 
