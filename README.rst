@@ -199,7 +199,13 @@ housing that cost about $5:
 
 .. image:: docs/images/camera-housing.jpg
 
-For more details on the Pi Zero based driveway camera and its enclosure, see
+And here is what it looks like assembled and mounted in our driveway. You can
+see the PiCamera behind the housing lens:
+
+.. image:: docs/images/camera-in-place-driveway.jpg
+
+For more details on the Pi Zero based driveway camera and its enclosure,
+including the assembly pictures and some "action shots", see
 `Driveway Camera Hardware Example. <docs/driveway-hardware.rst>`_
 
 Research and Development Roadmap
