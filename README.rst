@@ -3,10 +3,11 @@ yin-yang-ranch: Software & Raspberry Pis help manage a farm
 ===========================================================
 
 You can watch my PyCon YouTube video about this project here:
+
 **PyCon 2020 Talk: Jeff Bass - Yin Yang Ranch: Building a Distributed Computer
 Vision Pipeline using Python, OpenCV and ZMQ**
 
-`PyCon 2020 Talk Video  <https://youtu.be/76GGZGneJZ4>`_ 
+`PyCon 2020 Talk Video about this project  <https://youtu.be/76GGZGneJZ4?t=2`_ 
 
 Introduction
 ============
