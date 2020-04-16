@@ -10,6 +10,7 @@ You can watch my PyCon YouTube video about this project here:
 Vision Pipeline using Python, OpenCV and ZMQ**
 
 `PyCon 2020 Talk Video about this project  <https://youtu.be/76GGZGneJZ4?t=2>`_
+`PyCon 2020 Talk Presentation slides  <https://speakerdeck.com/jeffbass/yin-yang-ranch-building-a-distributed-computer-vision-pipeline-using-python-opencv-and-zmq-17024000-4389-4bae-9e4d-16302d20a5b6>`_
 
 Introduction
 ============
