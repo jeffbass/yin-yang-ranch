@@ -2,6 +2,12 @@
 yin-yang-ranch: Software & Raspberry Pis help manage a farm
 ===========================================================
 
+You can watch my PyCon YouTube video about this project here:
+**PyCon 2020 Talk: Jeff Bass - Yin Yang Ranch: Building a Distributed Computer
+Vision Pipeline using Python, OpenCV and ZMQ**
+
+`PyCon 2020 Talk Video  <https://youtu.be/76GGZGneJZ4>`_ 
+
 Introduction
 ============
 
@@ -31,11 +37,11 @@ meter) and irrigation valves.
 I currently have 4 repositories on GitHub:
 
 1. **yin-yang-ranch**: this repository. Overall project design and goals.
-2. `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
+2. `imageZMQ: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 4. `imagehub: Receive and Store Images and Event Logs. <https://github.com/jeffbass/imagehub>`_
 
-**imagezmq** moves images taken by Raspberry Pi computers to hub computers
+**imageZMQ** moves images taken by Raspberry Pi computers to hub computers
 for image processing. **imagenode** runs on multiple RPi computers, continuously
 capturing images, detecting motion, and gathering sensor data (e.g. air and
 soil temperatures). **imagehub** runs on a Mac or a Linux computer and receives
@@ -79,7 +85,7 @@ The project contains code repositories for each part of the design shown above
   webcams and various OpenCV techniques for image rotation, threshholding,
   dilation, differencing and motion detection.
   See `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
-- **imagezmq**: Python classes that transport OpenCV images from imagenodes to
+- **imageZMQ**: Python classes that transport OpenCV images from imagenodes to
   imagehubs.
   See `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 - **imagehub**: Python programs that gather images and sensor data from multiple
@@ -213,7 +219,7 @@ Research and Development Roadmap
 The **yin-yang-ranch** projects are in early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
-changes and code refactoring. I have pushed the **imagezmq**, **imagenode**
+changes and code refactoring. I have pushed the **imageZMQ**, **imagenode**
 and **imagehub** repositories to GitHub (see links above).
 
 The **librarian** and communications programs will follow in early 2019.
@@ -229,7 +235,7 @@ and design and TODO scaffolding before they contain code. I push them in these
 early stages to share them with collaborators (and with friends and relatives
 who wonder what IS that guy doing in retirement?).
 
-The `imagezmq repository <https://github.com/jeffbass/imagezmq>`_
+The `imageZMQ repository <https://github.com/jeffbass/imagezmq>`_
 contains test programs that show how images can be sent from multiple Raspberry
 Pi computers simultaneously to a hub computer. The **imagenode** and **imagehub**
 programs are evolutions of
