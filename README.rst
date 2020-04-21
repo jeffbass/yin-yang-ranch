@@ -13,8 +13,8 @@ Vision Pipeline using Python, OpenCV and ZMQ**
 
 `PyCon 2020 Talk Presentation slides  <https://speakerdeck.com/jeffbass/yin-yang-ranch-building-a-distributed-computer-vision-pipeline-using-python-opencv-and-zmq-17024000-4389-4bae-9e4d-16302d20a5b6>`_
 
-If you have a question about my PyCon 2020 talk, open an issue in this repository.
-For more about that see `yin-yang-ranc issue 2. <https://github.com/jeffbass/yin-yang-ranch/issues/2>`_
+If you have a question about my PyCon 2020 talk, open an issue!
+For more about that see `yin-yang-ranch issue 2. <https://github.com/jeffbass/yin-yang-ranch/issues/2>`_
 
 
 Introduction
