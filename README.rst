@@ -262,6 +262,16 @@ The **yin-yang-ranch** projects are in very early development and testing. I
 welcome questions and comments.  The easiest way to make a comment or ask a
 question about the project is to open an issue.
 
+An Excellent Alternative Design for an imagehub & librarian combination
+=======================================================================
+An ``imagenode`` & ``imagehub`` user and code contributor @sbkirby has designed
+a completely different approach to building an imagehub and librarian
+combination using a broad mix of tools in addition to Python including Node-Red,
+MQTT, MariaDB and OpenCV in Docker containers. He has posted it in this
+`Github repository <https://github.com/sbkirby/imagehub-librarian>`_.
+I like his approach a lot, although I'm still working on a mostly Python
+approach to my own librarian.
+
 Acknowledgments and Thank Yous
 ==============================
 - **The Raspberry Pi Foundation** and their remarkable Raspberry Pi tiny single
