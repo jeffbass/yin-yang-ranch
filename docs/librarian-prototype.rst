@@ -15,8 +15,8 @@ messages There are also some programs to monitor **imagenode** health.
 
 .. contents::
 
-Overview
-========
+Overview of the Librarian prototype
+===================================
 
 The **librarian** prototype has limited functionality. It can:
 
@@ -93,6 +93,23 @@ cloning this GitHub repository::
 
 Once you have cloned **librarian** to a directory on your local machine,
 you can run some tests using the instructions below.
+
+Data directories and files required by the Librarian
+====================================================
+
+The **librarian** requires data files from an **imagehub** running on the same
+computer. Although the imagehub does not need to be running for the **librarian**
+to run, the ``imagehub_data`` directories and files must be present. The
+primary function of the **librarian** prototype is to answer questions about
+the events in the **imagehub** event logs via ``CLI_chat`` or SMS text
+messages. For testing purposes, there is an ``imagehub_data`` directory loaded
+with examples from my own ``imagehub_data`` files. It is located in the
+``test-data`` directory in this GitHub repository. For a further description of
+the files created by the **imagehub** see ##########.
+
+The **librarian** also requires data files of its own. In this prototype, the
+only data files required are in ``test-data/librarian_data``. They include
+gmail ########### and contacts.txt in those same directories.
 
 Running the Librarian Prototype using CLI_chat.py
 =================================================
