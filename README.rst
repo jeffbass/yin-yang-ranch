@@ -71,12 +71,12 @@ The Overall Design
 
 The overall system design is a hub and spoke network with ZMQ messaging between
 Raspberry PiCameras and imagehubs. One image hub can simultaneously receive
-images from about 10 PiCameras. A librarian program stores images and extracted
-image features in a database. A communications program uses the database to
+images from about 10 PiCameras. A librarian program gathers event messages and
+images from the imagehubs. A communications program uses the event logs to
 answer queries about images and events, as shown in the SMS text exchange pictured
 above. By distributing computer vision processing pipelines across Raspberry Pi
 computers and more powerful computers like Macs, each computer can do what it
-is best at. A Raspberry Pi can take pictures with the PiCamera and adjust
+does best. A Raspberry Pi can take pictures with the PiCamera and adjust
 camera settings, control additional lighting, crop, flip and grayscale images,
 as well as detect motion. A Mac can store and index images from many Raspberry
 Pi computers simultaneously. It can perform more complex image processing like
@@ -87,8 +87,7 @@ attached to a single imagehub.
 
 .. image:: docs/images/CVpipeline.png
 
-The project contains code repositories for each part of the design shown above
-(The first 3 have been pushed to GitHub so far):
+The project contains code repositories for each part of the design shown above:
 
 - **imagenode**: image capture on Raspberry Pi and other computers using PiCameras,
   webcams and various OpenCV techniques for image rotation, threshholding,
@@ -97,36 +96,40 @@ The project contains code repositories for each part of the design shown above
 - **imageZMQ**: Python classes that transport OpenCV images from imagenodes to
   imagehubs.
   See `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
-- **imagehub**: Python programs that gather images and sensor data from multiple
+- **imagehub**: receives event messages, images and sensor data from multiple
   Raspberry Pi and other computers via imagezmq.
   See `imagehub: Receiving and saving images and event data from multiple Raspberry Pi's. <https://github.com/jeffbass/imagehub>`_
-- **librarian**: Python programs that index and store images, as well as perform
-  additional image processing including feature extraction, image and object
-  classification and creating text descriptions and summaries.
-- **commhub**: Python programs that provide a natural language interface for asking
-  various questions about the images (is the water running? was a coyote sighted
-  today?) using data compiled by the librarian.
-- **commagents**: Python programs that connect various communication channels to
-  the commhub, including an SMS/texting agent (example shown above), an email
-  agent, a webchat agent and an agent to keep the Yin Yang Ranch dashboard
-  updated.
-- **yin-yang-ranch** (*this GitHub repository*): Overall project documentation
-  and design. Also contains
-  Python programs that manage operations, like monitoring the health status of
-  all the subsystems, including electrical power and internet access. Currently,
-  this repository is mostly documentation for the overall system and some
-  hardware descriptions and diagrams.
+- **librarian**: reads the **imagehub** event logs and stored
+  images to answer questions about them. A prototype of the **librarian** code
+  is contained in this repository. It can answer simple queries like
+  those in the SMS texting example above.
+  See `The Librarian Prototype. <docs/librarian-prototype.rst>`_
+  Also, for an excellent alternative to my own librarian design, see this
+  `approach. <#an-excellent-alternative-design-for-an-imagehub--librarian-combination>`_
+- **commhub**: provides a very simple natural language interface for answering
+  questions about events and images (is the water running? was a coyote sighted
+  today?). It parses the inbound questions and provides simple answers using data
+  from the imagehub event logs. The **commhub** has methods for different
+  channels of communication with end users. The prototype **commhub** code in
+  this repository implements 2 communications channels: 1) SMS texting (using Google
+  Voice and its Gmail interface) and 2) a terminal window CLI text interface.
+- **commagents**: are separate Python programs connects each communication channel
+  to the **commhub**. For example, an SMS/texting agent (example shown above),
+  is implemented as ``gmail_watcher.py`` in this repository. Future **commagents**
+  such as an email agent and a webchat agent are being developed.
+- **yin-yang-ranch** (*this GitHub repository*): contains overall project
+  documentation and design. This repository also contains prototype Python
+  programs for the **librarian**, **commhub** and an example **commagent**. It
+  also contains example programs that monitor the health status of **imagenodes**.
 
 This distributed design allows each computer to do what it does best. A
 Raspberry Pi with a PiCamera can watch a water meter for needle motion, then
 transmit only those images show the water flow changes (from flowing
 to not flowing or vice versa). The logic for motion detection and image
-selection runs in the Raspberry Pi, which only sends relevant images to the
-**imagehub**, saving network bandwidth. The **imagehub** stores the event
+selection runs in the Raspberry Pi **imagenode**, which only sends relevant images
+to the **imagehub**, saving network bandwidth. The **imagehub** stores the event
 messages and images from multiple nodes at the same time. The **librarian**
-program does further analysis of the images and event messages, for example,
-using character extraction and recognition to read the numeric digits in the
-water meter and answer questions about water flow per day or per month. A more
+program answers user queries about images and event messages. A more
 complete "which computer does what" explanation can be found in
 `Distributing tasks among the multiple computers. <docs/distributed-flow.rst>`_
 
@@ -137,11 +140,12 @@ The system is written in Python and uses these packages. Higher versions will
 usually work fine, but these specific ones are known to work. See each specific
 repository above for more software details.
 
-- Python 3.5 and 3.6
-- OpenCV 3.3
-- Raspian Stretch
-- PyZMQ 16.0
-- imutils 0.4.3 (used get to images from PiCamera)
+- Python 3.6 and 3.7
+- OpenCV 3.3 and 4.0+
+- Raspian Buster
+- PyZMQ 20.0+
+- imagezmq 1.1.1+
+- imutils 0.4.3+ (used get to images from PiCamera)
 
 Hardware and Electronics
 ========================
@@ -229,20 +233,10 @@ The **yin-yang-ranch** projects are in early development and testing.
 Prototypes for all the modules in the design diagram above are working, and the
 early experiments have provided a lot of data to help with design
 changes and code refactoring. I have pushed the **imageZMQ**, **imagenode**
-and **imagehub** repositories to GitHub (see links above).
+and **imagehub** as separate repositories on GitHub (see links above).
 
-The **librarian** and communications programs will follow in early 2019.
-Hardware designs, diagrams and how-tos will be posted to this **yin-yang-ranch**
-repository over the spring and summer of 2019.
-
-There are many styles and choices about "when to push to GitHub" and when to share a
-project with the open source community. I am choosing to share my projects early
-in the development cycle, which means there is no code in this repository yet.
-My style is to write design and documentation first, then prototype the code and
-then iterate. So my first drafts and beta repositories contain documentation
-and design and TODO scaffolding before they contain code. I push them in these
-early stages to share them with collaborators (and with friends and relatives
-who wonder what IS that guy doing in retirement?).
+The **librarian** and communications programs have prototypes in this repository
+`Driveway Camera Hardware Example. <docs/driveway-hardware.rst>`_
 
 The `imageZMQ repository <https://github.com/jeffbass/imagezmq>`_
 contains test programs that show how images can be sent from multiple Raspberry
@@ -270,7 +264,8 @@ combination using a broad mix of tools in addition to Python including Node-Red,
 MQTT, MariaDB and OpenCV in Docker containers. He has posted it in this
 `Github repository <https://github.com/sbkirby/imagehub-librarian>`_.
 I like his approach a lot, although I'm still working on a mostly Python
-approach to my own librarian.
+approach to my own librarian that is an extension of the prototype librarian in
+this repository.
 
 Acknowledgments and Thank Yous
 ==============================
