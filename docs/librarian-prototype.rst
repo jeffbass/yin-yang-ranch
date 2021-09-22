@@ -1,6 +1,6 @@
-=======================================================================
-A simple prototype of the Librarian and related Communications Programs
-=======================================================================
+===============================================================
+A simple prototype of the Librarian and Communications Programs
+===============================================================
 
 Introduction
 ============
@@ -9,9 +9,9 @@ The **librarian** is the program at the heart of the yin-yang-ranch system. It a
 as a librarian would be expected to. It keeps track of lots of information that
 is on file, and answers questions about it. It also creates summary files, does
 backups and checks that all the other systems are working OK. Most of the
-information that the **librarian** keeps track of is the data sent by
+information that the **librarian** keeps track of is the data that is sent by
 **imagenodes** to **imagehubs**, including images, sensor readings and event
-messages There are also some included programs to monitor **imagenode** heatlh.
+messages There are also some programs to monitor **imagenode** health.
 
 .. contents::
 
@@ -21,18 +21,20 @@ Overview
 The **librarian** prototype has limited functionality. It can:
 
 - Receive and reply to queries from a simple terminal CLI interface
-- Receive and reply to SMS text messages using a Google Voice number
-- Answer questions about current status (e.g., Is the water flowing?)
+- Receive and reply to queries via SMS text messages sent to a Google Voice number
+- Answer questions about current **imagenode** status (e.g., Is the water flowing?)
 - Include information about a previous state ("water is off; last time flowing was 5:03pm").
 - Answer questions about sensor readings ("Inside temperature?")
 
 For example, here is a text message exchange with "Susan", my librarian bot:
 
-.. image:: docs/images/text-messaging.png
+.. image:: images/text-messaging.png
 
-That is a screen shot from a phone that had texted the Google Voice phone
-number that is watched by the **librarian** prototype. The **librarian** code
-that is in this repository was running when the screen shot was generated.
+That is a screen shot from a phone that had texted the "Susan" Google Voice phone
+number that was being watched by the **librarian** prototype. The **librarian** code
+that is in this repository was running and generated the responses shown in the
+screen shot. The **librarian** was running on the same Linux computer that was
+running the **imagehub** for 12 **imagenodes**.
 
 Librarian Prototype Capabilities & Communications Channels
 ==========================================================
@@ -50,20 +52,32 @@ interface.
 The **librarian** prototype also has a "scheduled SMS text message" capability
 which I use to have it send reminder texts for things like changing the
 rechargeable battery in a remote **imagenode** camera. You can see an example
-of how to set up "scheduled SMS text messages" in the ```librarian.yaml`` file.
+of how to set up "scheduled SMS text messages" in the ``librarian.yaml`` file.
 
 This **librarian** prototype is incomplete and buggy. It is included in this
 repository to convey understanding of one possible design. It is
 not ready for production use (although I have been running a version of it on
 my ranch for about 3 years). This code is the basis for the **librarian** version
-I am currently developing to push to its own GitHub repository when it has
-a more complete and reliable set of capabilites.
+I am currently developing to push to its own GitHub repository when it is
+more complete and has a broader set of capabilites.
 
-If you do want to experiment with it, here are some hints to help you install
-and run it. But please remember that it is experimental...so expect issues.
+If you do want to experiment with the **librarian** prototype, here are some
+hints to help you install and run it. But please remember that it is
+experimental...so expect issues.
 
-Dependencies and Installation
-=============================
+I am continuing to develop the **librarian** prototype and expect to push a
+more complete version to its own GitHub repository (with more detailed
+installation, setup and testing information) at some time in the future.
+Timing is uncertain as other priorities around the ranch (and my retirement
+life!) keep pushing out the ongoing refactoring and development. I have a
+working Librarian development design that includes a list of desired goals and
+features in
+`Librarian Design and Development Goals <docs/librarian-design.rst>`_.
+That design is a roadmap for ongoing development of the Librarian, the
+Communications modules and Image Analysis.
+
+Dependencies and Installation for the Librarian Prototype
+=========================================================
 
 The **librarian** prototype has been tested with:
 
@@ -80,11 +94,12 @@ cloning this GitHub repository::
 Once you have cloned **librarian** to a directory on your local machine,
 you can run some tests using the instructions below.
 
-Running the Librarian Prototype
-===============================
+Running the Librarian Prototype using CLI_chat.py
+=================================================
 
-The steps to run the prototype:
-1. Make sure you have an **imagehub** that has generated an event log and image
+The steps to run the prototype::
+
+1. Make sure you have an **imagehub** that has generated a event logs and image
    files. The librarian requires a populated "imagehub_data" directory in order
    to run. A sample event log is in the examples directory. You do not have to
    actually run the **imagehub** while running the **librarian**, but that is
@@ -100,56 +115,56 @@ The steps to run the prototype:
 
    .. code-block:: bash
 
-    cd ~/librarian/librarian
-    workon py3cv3
-    python librarian.py
+      cd ~/librarian/librarian
+      workon py3cv3
+      python librarian.py
 
 5. Then run the CLI_chat.py program to "chat" with the librarian from
    a terminal prompt:
 
    .. code-block:: bash
-     cd ~/librarian/librarian/helpers/comms
-     workon py3cv3
-     python CLI_chat.py
+
+      cd ~/librarian/librarian/helpers/comms
+      workon py3cv3
+      python CLI_chat.py
 
 6. You will then enter query words suitable for your imagehub_data events log.
    The Librarian will respond with answers from the events log. Here is an
    example:
 
    .. code-block::
+
       (py37cv4) jeffbass@jeff-thinkpad:~/librarian/librarian/helpers/comms$ python CLI_chat.py
       Default Librarian address is: tcp://localhost:5557
       Press enter to keep it, or enter a different one: _?
       CLI Chat with Librarian.
-
       _? water
-
       Water is off; last time flowing was at 8:30 PM.
-
       _? inside temperatures
-
       Temperature inside house is 75. Temperature in garage is 75.
-
       _? deck
-
       Temperature on back deck is 70.
-
       _? ^C  # press Ctrl-C to exit the program
       (py37cv4) jeffbass@jeff-thinkpad:~/SDBops2/librarian/librarian/helpers/comms$
 
 
-It is important that you get the **librarian** prototype working with
+Running the Librarian Prototype using SMS texting via a Google Voice number
+===========================================================================
+
+It is **very** important that you get the **librarian** prototype working with
 ``CLI_chat.py`` before attempting to use the ``gmail_watcher.py``
 program, which watches for incoming SMS text messages sent to a Google Voice
 number.
 
-Using the ``gmail_watcher.py`` program requires a thorough knowledge of the Gmail
-Python API and all of the set up and credentials creation process for getting it working.
+Using the ``gmail_watcher.py`` program requires a thorough knowledge of the
+`Gmail Python API <https://developers.google.com/gmail/api/quickstart/python>`_
+and all of the set up and credentials creation process for getting it working.
 If you are not already familiar with using the Gmail Python API for accessing
 Gmail, then you should NOT be using the **librarian** prototype as your
 first experiment with using it. If you are familiar with the Gmail API and have used
 it successfully in other Python applications, then these steps should be familiar
 to you:
+
 1. Set up a Gmail account for use by the **librarian** program. DO NOT use
    the **librarian** Gmail / Google Voice API for an account that is being used
    for anything other than test purposes. Using the Gmail API incorrectly can
@@ -164,12 +179,12 @@ to you:
    the credential files are created and you can use them correctly.
 5. Send an SMS text message to the Google Voice number. Log in to the Gmail
    account and make sure you can read the SMS message. It will appear as an
-   email from a phone number in a format like
+   email from a phone number in an email address format like
    ``18885551212.18775551212.txt.voice.google.com`` where the first number is
-   the receiving Google Voice number and the second number is the phone that
-   sent the message.
+   the Google Voice number receiving the message and the second number is the
+   phone number that sent the message.
 6. Use the Gmail ``reply`` button to send a short reply to the SMS message.
-   Sent it. You should see the reply appear on your phone.
+   Send it. You should see the reply appear on your phone.
 7. Edit your librarian.yaml file to "un comment" the gmail settings.
 8. Create a ``contacts.txt`` file with the name and phone number of any phone
    that you would want the **librarian** to take incoming texts from. I often
@@ -185,6 +200,7 @@ to you:
 12. Run the **librarian** program:
 
     .. code-block:: bash
+
        cd ~/librarian/librarian
        workon py3cv3
        python librarian.py
@@ -198,6 +214,7 @@ to you:
     SMS text numbers to the Google Voice number you set up:
 
     .. code-block:: bash
+
        cd ~/librarian/librarian
        workon py3cv3
        python gmail_watcher.py
@@ -211,7 +228,7 @@ to you:
     send a reply just like the ``CLI_chat.py`` program did.
 
 Setting up the **librarian** prototype for using this Google Voice SMS texting
-communications channel is difficult to debug. You cannot expect to get any
+communications channel is very difficult to debug. You cannot expect to get any
 support other than reading the Google Gmail Python API docs and reading the
 source code for the **librarian** prototype. It's an experimental prototype.
 It works for me. It may or may not work for you and I cannot provide help in
@@ -219,7 +236,11 @@ debugging it for you.
 
 You may want to read the **librarian** prototype code as a model, and then use
 a different SMS texting interface such as Twilio rather than the Gmail / Google
-Voice technique used in this **librarian** prototype.
+Voice technique used in this **librarian** prototype. Wnen a more complete
+version of the **librarian** is pushed to its own GitHub repository, it will
+include code for using the
+`Twilio Python API <https://www.twilio.com/docs/libraries/python>`_
+so that a Twilio SMS text number can be used.
 
 Librarian settings via YAML files
 =================================
