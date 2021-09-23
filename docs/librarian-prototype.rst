@@ -65,6 +65,15 @@ If you do want to experiment with the **librarian** prototype, here are some
 hints to help you install and run it. But please remember that it is
 experimental...so expect issues.
 
+Also, the "location words" like "barn" and "deck" are hard-wired directly into
+the code of xxxxx.py at line ... Similarily, the sensor words like "temperature"
+are hard-wired into the same program. This will be changed in future development,
+but for now, you can test the **librarian** using the the test data in the
+``test-data`` folder of this repository. That event data includes the keywords
+that are hard-wired into the xxxxx.py module. If you want to use the
+**librarian** prototype with your own event logs, you will need to change the
+``location words`` and the ``observation words`` to match your own event data.
+
 I am continuing to develop the **librarian** prototype and expect to push a
 more complete version to its own GitHub repository (with more detailed
 installation, setup and testing information) at some time in the future.
@@ -114,7 +123,12 @@ gmail ########### and contacts.txt in those same directories.
 Running the Librarian Prototype using CLI_chat.py
 =================================================
 
-The steps to run the prototype::
+The easiest way to run the **librarian** prototype is to run the terminal
+CLI chat program to send queries. It requires running ``librarian.py`` to
+listen for queries and compose reponses AND running ``CLI_chat.py`` to allow
+you to enter test queries.
+
+The steps to run the **librarian** prototype this way are::
 
 1. Make sure you have an **imagehub** that has generated a event logs and image
    files. The librarian requires a populated "imagehub_data" directory in order
@@ -128,7 +142,7 @@ The steps to run the prototype::
    directory and a few other options in the yaml file. Comment out the options
    that you don't need in the yaml file using a #, just like a Python comment.
 3. Activate your Python virtual environment.
-4. Run the **librarian** program:
+4. Run the **librarian** program in one terminal window:
 
    .. code-block:: bash
 
@@ -137,7 +151,7 @@ The steps to run the prototype::
       python librarian.py
 
 5. Then run the CLI_chat.py program to "chat" with the librarian from
-   a terminal prompt:
+   a terminal prompt in a different terminal window:
 
    .. code-block:: bash
 
