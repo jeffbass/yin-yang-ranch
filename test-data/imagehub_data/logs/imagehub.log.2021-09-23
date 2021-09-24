@@ -1,0 +1,794 @@
+2021-09-23 00:16:44,839 ~ BackDeck|Temp|63 F
+2021-09-23 00:26:44,791 ~ BackDeck|Temp|64 F
+2021-09-23 00:36:44,711 ~ BackDeck|Temp|63 F
+2021-09-23 01:16:44,847 ~ BackDeck|Temp|62 F
+2021-09-23 01:26:58,720 ~ Garage|Temp|74 F
+2021-09-23 01:46:44,636 ~ BackDeck|Temp|61 F
+2021-09-23 02:02:01,917 ~ WaterMeter|motion|moving
+2021-09-23 02:25:02,990 ~ JeffOffice|Temp|73 F
+2021-09-23 02:26:11,669 ~ WaterMeter|motion|still
+2021-09-23 02:26:44,698 ~ BackDeck|Temp|60 F
+2021-09-23 02:56:44,770 ~ BackDeck|Temp|59 F
+2021-09-23 03:11:45,073 ~ WaterMeter|motion|moving
+2021-09-23 03:13:20,102 ~ WaterMeter|motion|still
+2021-09-23 03:24:45,069 ~ WaterMeter|motion|moving
+2021-09-23 03:26:44,878 ~ BackDeck|Temp|58 F
+2021-09-23 03:36:44,754 ~ BackDeck|Temp|59 F
+2021-09-23 03:46:44,808 ~ BackDeck|Temp|58 F
+2021-09-23 03:52:05,003 ~ WaterMeter|motion|still
+2021-09-23 04:16:44,690 ~ BackDeck|Temp|57 F
+2021-09-23 04:26:44,757 ~ BackDeck|Temp|56 F
+2021-09-23 04:36:44,936 ~ BackDeck|Temp|57 F
+2021-09-23 04:46:44,799 ~ BackDeck|Temp|56 F
+2021-09-23 04:55:02,966 ~ JeffOffice|Temp|72 F
+2021-09-23 05:26:58,878 ~ Garage|Temp|73 F
+2021-09-23 06:06:44,731 ~ BackDeck|Temp|55 F
+2021-09-23 06:25:55,379 ~ Driveway Mailbox|motion|moving
+2021-09-23 06:25:55,672 ~ Driveway Mailbox|motion|still
+2021-09-23 06:25:57,325 ~ Driveway Mailbox|motion|moving
+2021-09-23 06:25:58,042 ~ Driveway Mailbox|motion|still
+2021-09-23 07:16:44,747 ~ BackDeck|Temp|56 F
+2021-09-23 07:25:02,943 ~ JeffOffice|Temp|71 F
+2021-09-23 07:25:23,833 ~ JeffOffice|Temp|71 F
+2021-09-23 07:25:23,841 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|345.04
+2021-09-23 07:36:44,908 ~ BackDeck|Temp|58 F
+2021-09-23 07:46:44,770 ~ BackDeck|Temp|59 F
+2021-09-23 07:56:44,838 ~ BackDeck|Temp|60 F
+2021-09-23 08:06:44,904 ~ BackDeck|Temp|61 F
+2021-09-23 08:10:32,939 ~ WaterMeter|motion|moving
+2021-09-23 08:13:09,410 ~ WaterMeter|motion|still
+2021-09-23 08:16:44,778 ~ BackDeck|Temp|63 F
+2021-09-23 08:26:44,838 ~ BackDeck|Temp|64 F
+2021-09-23 08:29:42,901 ~ WaterMeter|motion|moving
+2021-09-23 08:32:07,286 ~ WaterMeter|motion|still
+2021-09-23 08:35:24,914 ~ JeffOffice|Temp|72 F
+2021-09-23 08:36:44,786 ~ BackDeck|Temp|66 F
+2021-09-23 08:36:47,763 ~ Driveway Mailbox|motion|moving
+2021-09-23 08:36:47,933 ~ Driveway Mailbox|motion|still
+2021-09-23 08:37:29,842 ~ WaterMeter|motion|moving
+2021-09-23 08:43:05,921 ~ WaterMeter|motion|still
+2021-09-23 08:46:44,778 ~ BackDeck|Temp|67 F
+2021-09-23 08:49:38,933 ~ WaterMeter|motion|moving
+2021-09-23 08:52:48,379 ~ WaterMeter|motion|still
+2021-09-23 08:56:44,782 ~ BackDeck|Temp|69 F
+2021-09-23 09:01:59,693 ~ Driveway Mailbox|motion|moving
+2021-09-23 09:02:01,132 ~ Driveway Mailbox|motion|still
+2021-09-23 09:02:22,841 ~ WaterMeter|motion|moving
+2021-09-23 09:06:44,895 ~ BackDeck|Temp|75 F
+2021-09-23 09:06:49,712 ~ WaterMeter|motion|still
+2021-09-23 09:07:19,802 ~ WaterMeter|motion|moving
+2021-09-23 09:09:01,383 ~ WaterMeter|motion|still
+2021-09-23 09:15:17,194 ~ WaterMeter|motion|moving
+2021-09-23 09:16:44,757 ~ BackDeck|Temp|76 F
+2021-09-23 09:16:57,239 ~ WaterMeter|motion|still
+2021-09-23 09:17:16,184 ~ WaterMeter|motion|moving
+2021-09-23 09:18:10,252 ~ Driveway Mailbox|motion|moving
+2021-09-23 09:18:12,298 ~ Driveway Mailbox|motion|still
+2021-09-23 09:18:50,698 ~ WaterMeter|motion|still
+2021-09-23 09:20:55,320 ~ WaterMeter|motion|moving
+2021-09-23 09:22:15,807 ~ WaterMeter|motion|still
+2021-09-23 09:25:24,838 ~ JeffOffice|Temp|73 F
+2021-09-23 09:26:44,823 ~ BackDeck|Temp|77 F
+2021-09-23 09:33:55,816 ~ WaterMeter|motion|moving
+2021-09-23 09:35:26,748 ~ WaterMeter|motion|still
+2021-09-23 09:35:57,672 ~ WaterMeter|motion|moving
+2021-09-23 09:36:44,890 ~ BackDeck|Temp|78 F
+2021-09-23 09:37:24,614 ~ WaterMeter|motion|still
+2021-09-23 09:38:11,817 ~ WaterMeter|motion|moving
+2021-09-23 09:41:18,800 ~ WaterMeter|motion|still
+2021-09-23 09:56:43,888 ~ DownstairsDoor|motion|moving
+2021-09-23 09:56:44,704 ~ BackDeck|Temp|79 F
+2021-09-23 09:56:44,705 ~ DownstairsDoor|motion|still
+2021-09-23 09:56:45,524 ~ DownstairsDoor|motion|moving
+2021-09-23 09:56:46,138 ~ DownstairsDoor|motion|still
+2021-09-23 09:59:37,966 ~ DownstairsDoor|motion|moving
+2021-09-23 09:59:38,580 ~ DownstairsDoor|motion|still
+2021-09-23 10:01:13,610 ~ DownstairsDoor|motion|moving
+2021-09-23 10:01:14,432 ~ DownstairsDoor|motion|still
+2021-09-23 10:02:30,409 ~ DownstairsDoor|motion|moving
+2021-09-23 10:02:31,022 ~ DownstairsDoor|motion|still
+2021-09-23 10:03:54,583 ~ WaterMeter|motion|moving
+2021-09-23 10:04:56,435 ~ DownstairsDoor|motion|moving
+2021-09-23 10:04:57,060 ~ DownstairsDoor|motion|still
+2021-09-23 10:04:58,070 ~ DownstairsDoor|motion|moving
+2021-09-23 10:04:59,094 ~ DownstairsDoor|motion|still
+2021-09-23 10:04:59,402 ~ DownstairsDoor|motion|moving
+2021-09-23 10:05:00,222 ~ DownstairsDoor|motion|still
+2021-09-23 10:05:09,745 ~ Grapes|motion|moving
+2021-09-23 10:05:11,181 ~ Grapes|motion|still
+2021-09-23 10:05:23,671 ~ WaterMeter|motion|still
+2021-09-23 10:05:29,815 ~ Driveway Mailbox|motion|moving
+2021-09-23 10:05:31,453 ~ Driveway Mailbox|motion|still
+2021-09-23 10:06:44,884 ~ BackDeck|Temp|80 F
+2021-09-23 10:15:24,965 ~ JeffOffice|Temp|74 F
+2021-09-23 10:19:07,174 ~ WaterMeter|motion|moving
+2021-09-23 10:23:24,002 ~ WaterMeter|motion|still
+2021-09-23 10:24:23,591 ~ WaterMeter|motion|moving
+2021-09-23 10:27:00,673 ~ WaterMeter|motion|still
+2021-09-23 10:40:46,225 ~ Driveway Mailbox|motion|moving
+2021-09-23 10:40:46,430 ~ Driveway Mailbox|motion|still
+2021-09-23 10:41:12,849 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 10:41:13,161 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 10:41:34,354 ~ Driveway Mailbox|motion|moving
+2021-09-23 10:41:40,293 ~ Driveway Mailbox|motion|still
+2021-09-23 10:43:20,850 ~ Grapes|motion|moving
+2021-09-23 10:43:22,899 ~ Grapes|motion|still
+2021-09-23 10:43:42,969 ~ DownstairsDoor|motion|moving
+2021-09-23 10:43:43,583 ~ DownstairsDoor|motion|still
+2021-09-23 10:43:43,995 ~ DownstairsDoor|motion|moving
+2021-09-23 10:43:46,348 ~ DownstairsDoor|motion|still
+2021-09-23 10:43:47,070 ~ DownstairsDoor|motion|moving
+2021-09-23 10:43:49,932 ~ DownstairsDoor|motion|still
+2021-09-23 10:44:12,562 ~ DownstairsDoor|Restart|rpi14|RPi|192.168.86.32|869|1896.79
+2021-09-23 10:44:13,075 ~ DownstairsDoor|motion|still
+2021-09-23 10:45:16,972 ~ WaterMeter|motion|moving
+2021-09-23 10:46:44,753 ~ BackDeck|Temp|82 F
+2021-09-23 10:47:28,537 ~ DownstairsDoor|motion|moving
+2021-09-23 10:47:29,274 ~ DownstairsDoor|motion|still
+2021-09-23 10:47:29,721 ~ DownstairsDoor|motion|moving
+2021-09-23 10:47:30,297 ~ DownstairsDoor|motion|still
+2021-09-23 10:48:39,521 ~ WaterMeter|motion|still
+2021-09-23 10:49:07,578 ~ DownstairsDoor|motion|moving
+2021-09-23 10:49:08,403 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:14,068 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:15,368 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:17,006 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:18,030 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:30,473 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:32,980 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:36,872 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:37,691 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:37,997 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:39,124 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:47,112 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:47,861 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:48,340 ~ DownstairsDoor|motion|moving
+2021-09-23 10:50:48,955 ~ DownstairsDoor|motion|still
+2021-09-23 10:50:55,509 ~ WaterMeter|motion|moving
+2021-09-23 11:03:31,428 ~ Grapes|motion|moving
+2021-09-23 11:03:31,623 ~ Grapes|motion|still
+2021-09-23 11:03:31,803 ~ Grapes|motion|moving
+2021-09-23 11:03:32,659 ~ Grapes|motion|still
+2021-09-23 11:03:32,818 ~ Grapes|motion|moving
+2021-09-23 11:03:33,051 ~ Grapes|motion|still
+2021-09-23 11:03:33,339 ~ Grapes|motion|moving
+2021-09-23 11:03:33,595 ~ Grapes|motion|still
+2021-09-23 11:03:34,295 ~ Grapes|motion|moving
+2021-09-23 11:03:34,470 ~ Grapes|motion|still
+2021-09-23 11:03:35,319 ~ Grapes|motion|moving
+2021-09-23 11:03:35,687 ~ Grapes|motion|still
+2021-09-23 11:03:35,869 ~ Grapes|motion|moving
+2021-09-23 11:03:36,553 ~ Grapes|motion|still
+2021-09-23 11:03:36,719 ~ Grapes|motion|moving
+2021-09-23 11:03:36,883 ~ Grapes|motion|still
+2021-09-23 11:03:37,574 ~ Grapes|motion|moving
+2021-09-23 11:03:37,736 ~ Grapes|motion|still
+2021-09-23 11:03:39,622 ~ Grapes|motion|moving
+2021-09-23 11:03:39,786 ~ Grapes|motion|still
+2021-09-23 11:03:40,132 ~ Grapes|motion|moving
+2021-09-23 11:03:40,644 ~ Grapes|motion|still
+2021-09-23 11:03:40,832 ~ Grapes|motion|moving
+2021-09-23 11:03:41,092 ~ Grapes|motion|still
+2021-09-23 11:06:44,887 ~ BackDeck|Temp|83 F
+2021-09-23 11:10:31,270 ~ DownstairsDoor|motion|moving
+2021-09-23 11:10:33,749 ~ DownstairsDoor|motion|still
+2021-09-23 11:10:34,036 ~ DownstairsDoor|motion|moving
+2021-09-23 11:10:34,753 ~ DownstairsDoor|motion|still
+2021-09-23 11:10:38,442 ~ DownstairsDoor|motion|moving
+2021-09-23 11:10:39,269 ~ DownstairsDoor|motion|still
+2021-09-23 11:10:41,921 ~ DownstairsDoor|motion|moving
+2021-09-23 11:10:45,310 ~ DownstairsDoor|motion|still
+2021-09-23 11:10:48,066 ~ DownstairsDoor|motion|moving
+2021-09-23 11:10:49,702 ~ DownstairsDoor|motion|still
+2021-09-23 11:11:37,933 ~ WaterMeter|motion|still
+2021-09-23 11:11:42,546 ~ WaterMeter|motion|moving
+2021-09-23 11:14:36,212 ~ DownstairsDoor|motion|moving
+2021-09-23 11:14:36,827 ~ DownstairsDoor|motion|still
+2021-09-23 11:14:38,055 ~ DownstairsDoor|motion|moving
+2021-09-23 11:14:41,127 ~ DownstairsDoor|motion|still
+2021-09-23 11:14:45,133 ~ DownstairsDoor|motion|moving
+2021-09-23 11:14:47,874 ~ DownstairsDoor|motion|still
+2021-09-23 11:14:53,825 ~ DownstairsDoor|motion|moving
+2021-09-23 11:14:54,444 ~ DownstairsDoor|motion|still
+2021-09-23 11:15:22,907 ~ WaterMeter|motion|still
+2021-09-23 11:15:24,749 ~ JeffOffice|Temp|75 F
+2021-09-23 11:18:24,156 ~ Driveway Mailbox|motion|moving
+2021-09-23 11:18:28,867 ~ Driveway Mailbox|motion|still
+2021-09-23 11:19:56,726 ~ Grapes|motion|moving
+2021-09-23 11:19:56,919 ~ Grapes|motion|still
+2021-09-23 11:19:58,570 ~ Grapes|motion|moving
+2021-09-23 11:19:58,786 ~ Grapes|motion|still
+2021-09-23 11:19:59,388 ~ Grapes|motion|moving
+2021-09-23 11:19:59,798 ~ Grapes|motion|still
+2021-09-23 11:20:00,002 ~ Grapes|motion|moving
+2021-09-23 11:20:00,164 ~ Grapes|motion|still
+2021-09-23 11:20:20,279 ~ Driveway Mailbox|motion|moving
+2021-09-23 11:20:23,007 ~ Driveway Mailbox|motion|still
+2021-09-23 11:20:23,251 ~ Driveway Mailbox|motion|moving
+2021-09-23 11:20:25,398 ~ Driveway Mailbox|motion|still
+2021-09-23 11:20:25,583 ~ Driveway Mailbox|motion|moving
+2021-09-23 11:20:26,217 ~ Driveway Mailbox|motion|still
+2021-09-23 11:20:26,419 ~ Driveway Mailbox|motion|moving
+2021-09-23 11:20:26,610 ~ Driveway Mailbox|motion|still
+2021-09-23 11:20:48,542 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 11:20:48,869 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 11:24:42,854 ~ WaterMeter|motion|moving
+2021-09-23 11:29:59,866 ~ WaterMeter|motion|still
+2021-09-23 11:36:35,338 ~ WaterMeter|motion|moving
+2021-09-23 11:36:44,655 ~ BackDeck|Temp|82 F
+2021-09-23 11:46:44,951 ~ BackDeck|Temp|83 F
+2021-09-23 11:50:00,414 ~ WaterMeter|motion|still
+2021-09-23 11:56:44,792 ~ BackDeck|Temp|84 F
+2021-09-23 11:56:46,325 ~ WaterMeter|motion|moving
+2021-09-23 11:58:07,425 ~ WaterMeter|motion|still
+2021-09-23 12:03:11,753 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:03:14,012 ~ Driveway Mailbox|motion|still
+2021-09-23 12:03:14,499 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:03:15,445 ~ Driveway Mailbox|motion|still
+2021-09-23 12:03:16,059 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:03:19,541 ~ Driveway Mailbox|motion|still
+2021-09-23 12:03:19,691 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:03:20,058 ~ Driveway Mailbox|motion|still
+2021-09-23 12:05:24,830 ~ JeffOffice|Temp|76 F
+2021-09-23 12:06:28,531 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:06:29,801 ~ Driveway Mailbox|motion|still
+2021-09-23 12:06:29,951 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:06:32,668 ~ Driveway Mailbox|motion|still
+2021-09-23 12:06:33,493 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:06:33,897 ~ Driveway Mailbox|motion|still
+2021-09-23 12:06:44,665 ~ BackDeck|Temp|83 F
+2021-09-23 12:06:54,486 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 12:06:55,401 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 12:06:55,623 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 12:06:55,899 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 12:08:35,753 ~ WaterMeter|motion|moving
+2021-09-23 12:12:36,395 ~ WaterMeter|motion|still
+2021-09-23 12:14:47,377 ~ WaterMeter|motion|moving
+2021-09-23 12:16:20,243 ~ Garage|motion|moving
+2021-09-23 12:16:20,437 ~ Garage|motion|still
+2021-09-23 12:16:21,676 ~ Garage|motion|moving
+2021-09-23 12:16:22,290 ~ Garage|motion|still
+2021-09-23 12:16:44,737 ~ BackDeck|Temp|85 F
+2021-09-23 12:16:49,945 ~ Garage|Temp|74 F
+2021-09-23 12:16:53,625 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|205.06
+2021-09-23 12:16:53,723 ~ Garage|motion|still
+2021-09-23 12:17:51,995 ~ Garage|motion|moving
+2021-09-23 12:17:52,251 ~ Garage|motion|still
+2021-09-23 12:17:52,608 ~ Garage|motion|moving
+2021-09-23 12:17:53,739 ~ Garage|motion|still
+2021-09-23 12:17:58,137 ~ Garage|motion|moving
+2021-09-23 12:17:58,751 ~ WaterMeter|motion|still
+2021-09-23 12:17:58,890 ~ Garage|motion|still
+2021-09-23 12:18:03,257 ~ Garage|motion|moving
+2021-09-23 12:18:04,183 ~ Garage|motion|still
+2021-09-23 12:18:09,219 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:09,810 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:22,918 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:24,035 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:24,561 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:25,221 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:25,580 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:26,194 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:26,506 ~ Garage|motion|moving
+2021-09-23 12:18:26,507 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:26,792 ~ Garage|motion|still
+2021-09-23 12:18:27,218 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:27,525 ~ DownstairsDoor|motion|moving
+2021-09-23 12:18:28,242 ~ DownstairsDoor|motion|still
+2021-09-23 12:18:28,459 ~ Grapes|motion|moving
+2021-09-23 12:18:29,062 ~ Grapes|motion|still
+2021-09-23 12:18:29,275 ~ Grapes|motion|moving
+2021-09-23 12:18:35,206 ~ Grapes|motion|still
+2021-09-23 12:18:40,325 ~ Driveway Mailbox|motion|moving
+2021-09-23 12:18:48,930 ~ Driveway Mailbox|motion|still
+2021-09-23 12:19:11,661 ~ Driveway|Restart|rpi20|RPi|192.168.86.52|875|210.85
+2021-09-23 12:19:11,735 ~ Driveway Mailbox|motion|still
+2021-09-23 12:22:59,195 ~ Garage|motion|moving
+2021-09-23 12:22:59,443 ~ Garage|motion|still
+2021-09-23 12:36:44,746 ~ BackDeck|Temp|86 F
+2021-09-23 12:45:24,945 ~ JeffOffice|Temp|77 F
+2021-09-23 12:46:44,812 ~ BackDeck|Temp|85 F
+2021-09-23 13:04:52,919 ~ Driveway Mailbox|motion|moving
+2021-09-23 13:04:54,460 ~ Driveway Mailbox|motion|still
+2021-09-23 13:04:54,967 ~ Driveway Mailbox|motion|moving
+2021-09-23 13:04:55,581 ~ Driveway Mailbox|motion|still
+2021-09-23 13:04:55,709 ~ Driveway Mailbox|motion|moving
+2021-09-23 13:05:01,623 ~ Driveway Mailbox|motion|still
+2021-09-23 13:05:07,869 ~ Grapes|motion|moving
+2021-09-23 13:05:13,809 ~ Grapes|motion|still
+2021-09-23 13:05:54,772 ~ Garage|motion|moving
+2021-09-23 13:05:55,033 ~ Garage|motion|still
+2021-09-23 13:05:56,407 ~ Garage|motion|moving
+2021-09-23 13:05:56,816 ~ Garage|motion|still
+2021-09-23 13:06:09,516 ~ DownstairsDoor|motion|moving
+2021-09-23 13:06:10,129 ~ DownstairsDoor|motion|still
+2021-09-23 13:06:15,044 ~ Garage|motion|moving
+2021-09-23 13:06:15,181 ~ Garage|motion|still
+2021-09-23 13:06:29,175 ~ Garage|motion|moving
+2021-09-23 13:06:30,814 ~ Garage|motion|still
+2021-09-23 13:06:32,862 ~ DownstairsDoor|Restart|rpi14|RPi|192.168.86.32|869|1899.16
+2021-09-23 13:06:33,271 ~ DownstairsDoor|motion|still
+2021-09-23 13:06:40,030 ~ Garage|motion|moving
+2021-09-23 13:06:41,463 ~ Garage|motion|still
+2021-09-23 13:06:55,801 ~ Garage|motion|moving
+2021-09-23 13:06:55,938 ~ Garage|motion|still
+2021-09-23 13:08:14,648 ~ Garage|motion|moving
+2021-09-23 13:08:14,876 ~ Garage|motion|still
+2021-09-23 13:11:29,045 ~ Garage|motion|moving
+2021-09-23 13:11:29,436 ~ Garage|motion|still
+2021-09-23 13:11:51,738 ~ Garage|Temp|79 F
+2021-09-23 13:11:55,320 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|205.97
+2021-09-23 13:11:55,526 ~ Garage|motion|still
+2021-09-23 13:15:00,667 ~ WaterMeter|motion|moving
+2021-09-23 13:16:44,933 ~ BackDeck|Temp|84 F
+2021-09-23 13:17:08,660 ~ WaterMeter|motion|still
+2021-09-23 13:25:54,089 ~ WaterMeter|motion|moving
+2021-09-23 13:26:44,795 ~ BackDeck|Temp|83 F
+2021-09-23 13:27:56,758 ~ WaterMeter|motion|still
+2021-09-23 13:30:39,165 ~ WaterMeter|motion|moving
+2021-09-23 13:32:16,651 ~ WaterMeter|motion|still
+2021-09-23 13:32:27,096 ~ WaterMeter|motion|moving
+2021-09-23 13:33:50,245 ~ WaterMeter|motion|still
+2021-09-23 13:34:53,119 ~ WaterMeter|motion|moving
+2021-09-23 13:35:24,864 ~ JeffOffice|Temp|78 F
+2021-09-23 13:36:44,736 ~ BackDeck|Temp|82 F
+2021-09-23 13:39:34,720 ~ WaterMeter|motion|still
+2021-09-23 13:41:52,551 ~ Garage|Temp|78 F
+2021-09-23 13:42:15,086 ~ Garage|Temp|78 F
+2021-09-23 13:42:18,767 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|206.48
+2021-09-23 13:42:18,939 ~ Garage|motion|still
+2021-09-23 13:43:50,721 ~ WaterMeter|motion|moving
+2021-09-23 13:46:01,180 ~ WaterMeter|motion|still
+2021-09-23 13:46:44,928 ~ BackDeck|Temp|83 F
+2021-09-23 13:47:14,511 ~ WaterMeter|motion|moving
+2021-09-23 13:50:27,015 ~ WaterMeter|motion|still
+2021-09-23 13:50:35,001 ~ WaterMeter|motion|moving
+2021-09-23 13:55:41,586 ~ WaterMeter|motion|still
+2021-09-23 13:56:44,664 ~ BackDeck|Temp|82 F
+2021-09-23 14:05:24,858 ~ JeffOffice|Temp|77 F
+2021-09-23 14:15:24,924 ~ JeffOffice|Temp|78 F
+2021-09-23 14:16:44,821 ~ BackDeck|Temp|81 F
+2021-09-23 14:25:24,786 ~ JeffOffice|Temp|76 F
+2021-09-23 14:25:45,095 ~ JeffOffice|Temp|76 F
+2021-09-23 14:25:45,103 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|352.04
+2021-09-23 14:26:44,771 ~ BackDeck|Temp|80 F
+2021-09-23 14:35:46,151 ~ JeffOffice|Temp|77 F
+2021-09-23 14:36:44,724 ~ BackDeck|Temp|81 F
+2021-09-23 14:42:15,682 ~ Garage|Temp|77 F
+2021-09-23 14:45:46,217 ~ JeffOffice|Temp|75 F
+2021-09-23 14:46:44,842 ~ BackDeck|Temp|79 F
+2021-09-23 14:55:46,100 ~ JeffOffice|Temp|77 F
+2021-09-23 15:05:46,144 ~ JeffOffice|Temp|76 F
+2021-09-23 15:06:06,419 ~ JeffOffice|Temp|76 F
+2021-09-23 15:06:06,429 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|352.72
+2021-09-23 15:06:44,844 ~ BackDeck|Temp|80 F
+2021-09-23 15:07:11,341 ~ WaterMeter|motion|moving
+2021-09-23 15:08:38,997 ~ WaterMeter|motion|still
+2021-09-23 15:16:44,911 ~ BackDeck|Temp|79 F
+2021-09-23 15:26:07,372 ~ JeffOffice|Temp|77 F
+2021-09-23 15:36:07,234 ~ JeffOffice|Temp|75 F
+2021-09-23 15:46:07,301 ~ JeffOffice|Temp|77 F
+2021-09-23 15:46:27,576 ~ JeffOffice|Temp|77 F
+2021-09-23 15:46:27,585 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|353.39
+2021-09-23 15:46:44,908 ~ BackDeck|Temp|78 F
+2021-09-23 15:56:28,462 ~ JeffOffice|Temp|75 F
+2021-09-23 16:06:28,534 ~ JeffOffice|Temp|76 F
+2021-09-23 16:06:44,826 ~ BackDeck|Temp|77 F
+2021-09-23 16:16:28,600 ~ JeffOffice|Temp|75 F
+2021-09-23 16:16:44,899 ~ BackDeck|Temp|76 F
+2021-09-23 16:18:06,285 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 16:18:07,719 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 16:18:07,924 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 16:18:08,333 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 16:18:14,682 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 16:18:16,935 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 16:18:21,850 ~ WaterMeter|motion|moving
+2021-09-23 16:21:40,718 ~ WaterMeter|motion|still
+2021-09-23 16:25:11,656 ~ WaterMeter|motion|moving
+2021-09-23 16:26:28,666 ~ JeffOffice|Temp|76 F
+2021-09-23 16:26:49,142 ~ JeffOffice|Temp|76 F
+2021-09-23 16:26:49,151 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|354.06
+2021-09-23 16:29:12,708 ~ WaterMeter|motion|still
+2021-09-23 16:31:51,223 ~ DownstairsDoor|motion|moving
+2021-09-23 16:31:54,090 ~ DownstairsDoor|motion|still
+2021-09-23 16:32:05,558 ~ DownstairsDoor|motion|moving
+2021-09-23 16:32:06,192 ~ DownstairsDoor|motion|still
+2021-09-23 16:32:06,787 ~ DownstairsDoor|motion|moving
+2021-09-23 16:32:09,044 ~ DownstairsDoor|motion|still
+2021-09-23 16:32:09,660 ~ WaterMeter|motion|moving
+2021-09-23 16:32:59,013 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:00,445 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:02,088 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:04,336 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:04,951 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:05,770 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:06,077 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:06,794 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:07,101 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:07,819 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:09,463 ~ DownstairsDoor|motion|moving
+2021-09-23 16:33:11,301 ~ DownstairsDoor|motion|still
+2021-09-23 16:33:56,152 ~ WaterMeter|motion|still
+2021-09-23 16:34:10,285 ~ WaterMeter|motion|moving
+2021-09-23 16:34:41,616 ~ DownstairsDoor|motion|moving
+2021-09-23 16:34:42,846 ~ DownstairsDoor|motion|still
+2021-09-23 16:34:48,078 ~ DownstairsDoor|motion|moving
+2021-09-23 16:34:49,195 ~ DownstairsDoor|motion|still
+2021-09-23 16:34:49,604 ~ DownstairsDoor|motion|moving
+2021-09-23 16:34:50,219 ~ DownstairsDoor|motion|still
+2021-09-23 16:34:50,530 ~ DownstairsDoor|motion|moving
+2021-09-23 16:34:53,086 ~ DownstairsDoor|motion|still
+2021-09-23 16:35:08,445 ~ Grapes|motion|moving
+2021-09-23 16:35:09,063 ~ Grapes|motion|still
+2021-09-23 16:35:09,253 ~ Grapes|motion|moving
+2021-09-23 16:35:09,446 ~ Grapes|motion|still
+2021-09-23 16:35:09,590 ~ Grapes|motion|moving
+2021-09-23 16:35:11,928 ~ Grapes|motion|still
+2021-09-23 16:35:30,361 ~ Driveway Mailbox|motion|moving
+2021-09-23 16:35:30,772 ~ Driveway Mailbox|motion|still
+2021-09-23 16:36:44,730 ~ BackDeck|Temp|75 F
+2021-09-23 16:37:14,195 ~ WaterMeter|motion|still
+2021-09-23 16:40:29,681 ~ WaterMeter|motion|moving
+2021-09-23 16:40:54,563 ~ Grapes|motion|moving
+2021-09-23 16:40:54,744 ~ Grapes|motion|still
+2021-09-23 16:42:15,659 ~ Garage|Temp|76 F
+2021-09-23 16:42:20,780 ~ WaterMeter|motion|still
+2021-09-23 16:46:49,997 ~ JeffOffice|Temp|75 F
+2021-09-23 16:52:27,604 ~ WaterMeter|motion|moving
+2021-09-23 16:53:51,574 ~ WaterMeter|motion|still
+2021-09-23 16:56:44,707 ~ BackDeck|Temp|74 F
+2021-09-23 16:56:50,159 ~ JeffOffice|Temp|76 F
+2021-09-23 16:58:44,562 ~ Driveway Mailbox|motion|moving
+2021-09-23 16:58:47,306 ~ Driveway Mailbox|motion|still
+2021-09-23 16:59:47,722 ~ Driveway Mailbox|motion|moving
+2021-09-23 16:59:47,894 ~ Driveway Mailbox|motion|still
+2021-09-23 17:06:50,021 ~ JeffOffice|Temp|75 F
+2021-09-23 17:07:10,298 ~ JeffOffice|Temp|75 F
+2021-09-23 17:07:10,304 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|354.73
+2021-09-23 17:13:00,200 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:13:00,916 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:13:01,115 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:13:01,735 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:13:01,976 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:13:02,257 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:13:40,237 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:13:41,466 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:15:02,577 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:15:03,183 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:15:03,399 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 17:15:04,206 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 17:16:44,889 ~ BackDeck|Temp|73 F
+2021-09-23 17:17:11,387 ~ JeffOffice|Temp|76 F
+2021-09-23 17:26:44,943 ~ BackDeck|Temp|72 F
+2021-09-23 17:27:11,249 ~ JeffOffice|Temp|75 F
+2021-09-23 17:37:11,315 ~ JeffOffice|Temp|76 F
+2021-09-23 17:46:44,884 ~ BackDeck|Temp|71 F
+2021-09-23 17:47:11,382 ~ JeffOffice|Temp|75 F
+2021-09-23 17:47:31,662 ~ JeffOffice|Temp|75 F
+2021-09-23 17:47:31,671 ~ JeffOffice|Restart|rpi99|RPi|192.168.86.38|859|355.41
+2021-09-23 17:57:32,749 ~ JeffOffice|Temp|74 F
+2021-09-23 18:06:44,818 ~ BackDeck|Temp|70 F
+2021-09-23 18:07:32,614 ~ JeffOffice|Temp|75 F
+2021-09-23 18:17:32,681 ~ JeffOffice|Temp|74 F
+2021-09-23 18:26:44,932 ~ BackDeck|Temp|69 F
+2021-09-23 18:35:01,055 ~ Grapes|motion|moving
+2021-09-23 18:35:02,695 ~ Grapes|motion|still
+2021-09-23 18:35:16,002 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:16,621 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:18,460 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:19,484 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:22,536 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:23,170 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:25,218 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:28,086 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:31,567 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:32,181 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:33,717 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:37,302 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:42,832 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:45,707 ~ DownstairsDoor|motion|still
+2021-09-23 18:35:55,944 ~ DownstairsDoor|motion|moving
+2021-09-23 18:35:56,967 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:01,059 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:01,678 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:15,804 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:16,828 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:23,382 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:24,080 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:24,405 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:25,225 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:25,532 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:26,454 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:26,864 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:27,479 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:30,755 ~ DownstairsDoor|motion|moving
+2021-09-23 18:36:32,267 ~ DownstairsDoor|motion|still
+2021-09-23 18:36:44,713 ~ BackDeck|Temp|68 F
+2021-09-23 18:37:38,549 ~ DownstairsDoor|motion|moving
+2021-09-23 18:37:41,411 ~ DownstairsDoor|motion|still
+2021-09-23 18:37:52,471 ~ DownstairsDoor|motion|moving
+2021-09-23 18:37:53,494 ~ DownstairsDoor|motion|still
+2021-09-23 18:37:53,806 ~ DownstairsDoor|motion|moving
+2021-09-23 18:37:54,524 ~ DownstairsDoor|motion|still
+2021-09-23 18:37:56,571 ~ DownstairsDoor|motion|moving
+2021-09-23 18:37:57,283 ~ DownstairsDoor|motion|still
+2021-09-23 18:38:00,630 ~ DownstairsDoor|motion|moving
+2021-09-23 18:38:01,282 ~ DownstairsDoor|motion|still
+2021-09-23 18:38:06,192 ~ DownstairsDoor|motion|moving
+2021-09-23 18:38:08,241 ~ DownstairsDoor|motion|still
+2021-09-23 18:38:08,553 ~ DownstairsDoor|motion|moving
+2021-09-23 18:38:11,113 ~ DownstairsDoor|motion|still
+2021-09-23 18:38:50,839 ~ DownstairsDoor|motion|moving
+2021-09-23 18:38:53,091 ~ DownstairsDoor|motion|still
+2021-09-23 18:38:53,398 ~ DownstairsDoor|motion|moving
+2021-09-23 18:38:55,548 ~ DownstairsDoor|motion|still
+2021-09-23 18:39:27,701 ~ DownstairsDoor|motion|moving
+2021-09-23 18:39:28,726 ~ DownstairsDoor|motion|still
+2021-09-23 18:39:29,033 ~ DownstairsDoor|motion|moving
+2021-09-23 18:39:31,388 ~ DownstairsDoor|motion|still
+2021-09-23 18:39:41,014 ~ Driveway Mailbox|motion|moving
+2021-09-23 18:39:41,209 ~ Driveway Mailbox|motion|still
+2021-09-23 18:40:07,433 ~ DownstairsDoor|motion|moving
+2021-09-23 18:40:10,403 ~ DownstairsDoor|motion|still
+2021-09-23 18:40:33,648 ~ DownstairsDoor|Restart|rpi14|RPi|192.168.86.32|869|1904.73
+2021-09-23 18:40:34,058 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:14,301 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:15,018 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:42,671 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:43,485 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:43,793 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:44,714 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:46,459 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:47,172 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:48,610 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:49,629 ~ DownstairsDoor|motion|still
+2021-09-23 18:41:50,448 ~ DownstairsDoor|motion|moving
+2021-09-23 18:41:51,063 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:08,681 ~ DownstairsDoor|motion|moving
+2021-09-23 18:42:09,293 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:12,367 ~ DownstairsDoor|motion|moving
+2021-09-23 18:42:14,620 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:14,922 ~ DownstairsDoor|motion|moving
+2021-09-23 18:42:15,644 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:15,645 ~ Garage|Temp|75 F
+2021-09-23 18:42:15,910 ~ DownstairsDoor|motion|moving
+2021-09-23 18:42:16,668 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:17,072 ~ DownstairsDoor|motion|moving
+2021-09-23 18:42:18,814 ~ DownstairsDoor|motion|still
+2021-09-23 18:42:38,373 ~ Garage|Temp|76 F
+2021-09-23 18:42:42,263 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|211.49
+2021-09-23 18:42:42,469 ~ Garage|motion|still
+2021-09-23 18:43:19,538 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 18:43:20,151 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 18:43:20,347 ~ FrontWindow Sidewalk|motion|moving
+2021-09-23 18:43:20,765 ~ FrontWindow Sidewalk|motion|still
+2021-09-23 18:46:44,874 ~ BackDeck|Temp|67 F
+2021-09-23 18:46:49,253 ~ Grapes|motion|moving
+2021-09-23 18:46:50,893 ~ Grapes|motion|still
+2021-09-23 18:46:52,940 ~ Grapes|motion|moving
+2021-09-23 18:46:53,084 ~ Grapes|motion|still
+2021-09-23 18:47:25,093 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:25,912 ~ DownstairsDoor|motion|still
+2021-09-23 18:47:29,806 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:32,677 ~ JeffOffice|Temp|73 F
+2021-09-23 18:47:33,183 ~ DownstairsDoor|motion|still
+2021-09-23 18:47:36,153 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:36,972 ~ DownstairsDoor|motion|still
+2021-09-23 18:47:37,791 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:38,615 ~ DownstairsDoor|motion|still
+2021-09-23 18:47:41,068 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:41,683 ~ DownstairsDoor|motion|still
+2021-09-23 18:47:45,983 ~ DownstairsDoor|motion|moving
+2021-09-23 18:47:47,417 ~ DownstairsDoor|motion|still
+2021-09-23 18:52:01,369 ~ WaterMeter|motion|moving
+2021-09-23 18:53:25,339 ~ WaterMeter|motion|still
+2021-09-23 18:57:32,737 ~ JeffOffice|Temp|74 F
+2021-09-23 19:06:44,803 ~ BackDeck|Temp|66 F
+2021-09-23 19:06:53,893 ~ WaterMeter|motion|moving
+2021-09-23 19:07:32,604 ~ JeffOffice|Temp|75 F
+2021-09-23 19:12:39,186 ~ Garage|Temp|75 F
+2021-09-23 19:12:53,318 ~ WaterMeter|motion|still
+2021-09-23 19:13:01,313 ~ Garage|Temp|75 F
+2021-09-23 19:13:04,991 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|211.99
+2021-09-23 19:13:05,195 ~ Garage|motion|still
+2021-09-23 19:16:31,225 ~ WaterMeter|motion|moving
+2021-09-23 19:16:44,868 ~ BackDeck|Temp|65 F
+2021-09-23 19:19:54,797 ~ WaterMeter|motion|still
+2021-09-23 19:25:26,370 ~ WaterMeter|motion|moving
+2021-09-23 19:27:10,205 ~ WaterMeter|motion|still
+2021-09-23 19:28:59,266 ~ WaterMeter|motion|moving
+2021-09-23 19:30:19,850 ~ WaterMeter|motion|still
+2021-09-23 19:36:44,802 ~ BackDeck|Temp|64 F
+2021-09-23 19:56:44,923 ~ BackDeck|Temp|63 F
+2021-09-23 19:57:32,732 ~ JeffOffice|Temp|76 F
+2021-09-23 19:58:55,673 ~ WaterMeter|motion|moving
+2021-09-23 20:02:48,126 ~ WaterMeter|motion|still
+2021-09-23 20:06:44,783 ~ BackDeck|Temp|64 F
+2021-09-23 20:26:44,798 ~ BackDeck|Temp|63 F
+2021-09-23 20:27:32,727 ~ JeffOffice|Temp|74 F
+2021-09-23 20:34:19,661 ~ WaterMeter|motion|moving
+2021-09-23 20:37:32,788 ~ JeffOffice|Temp|75 F
+2021-09-23 20:41:07,630 ~ WaterMeter|motion|still
+2021-09-23 20:42:00,572 ~ WaterMeter|motion|moving
+2021-09-23 20:46:44,859 ~ BackDeck|Temp|62 F
+2021-09-23 20:47:31,011 ~ WaterMeter|motion|still
+2021-09-23 20:47:48,629 ~ WaterMeter|motion|moving
+2021-09-23 20:49:11,574 ~ WaterMeter|motion|still
+2021-09-23 20:50:21,611 ~ WaterMeter|motion|moving
+2021-09-23 20:52:26,949 ~ Garage|motion|moving
+2021-09-23 20:52:27,361 ~ Garage|motion|still
+2021-09-23 20:52:29,726 ~ Garage|motion|moving
+2021-09-23 20:52:30,431 ~ Garage|motion|still
+2021-09-23 20:53:08,933 ~ Garage|motion|moving
+2021-09-23 20:53:08,934 ~ DownstairsDoor|motion|moving
+2021-09-23 20:53:09,180 ~ Garage|motion|still
+2021-09-23 20:53:09,553 ~ DownstairsDoor|motion|still
+2021-09-23 20:53:15,082 ~ Garage|motion|moving
+2021-09-23 20:53:15,446 ~ Garage|motion|still
+2021-09-23 20:53:18,764 ~ Garage|motion|moving
+2021-09-23 20:53:19,993 ~ Garage|motion|still
+2021-09-23 20:53:21,428 ~ Garage|motion|moving
+2021-09-23 20:53:21,528 ~ Garage|motion|still
+2021-09-23 20:53:25,521 ~ Garage|motion|moving
+2021-09-23 20:53:25,742 ~ Garage|motion|still
+2021-09-23 20:53:26,341 ~ Garage|motion|moving
+2021-09-23 20:53:27,569 ~ Garage|motion|still
+2021-09-23 20:53:29,520 ~ Garage|motion|moving
+2021-09-23 20:53:31,054 ~ Garage|motion|still
+2021-09-23 20:53:31,872 ~ Garage|motion|moving
+2021-09-23 20:53:32,077 ~ Garage|motion|still
+2021-09-23 20:53:32,485 ~ Garage|motion|moving
+2021-09-23 20:53:32,594 ~ Garage|motion|still
+2021-09-23 20:53:33,099 ~ Garage|motion|moving
+2021-09-23 20:53:33,402 ~ Garage|motion|still
+2021-09-23 20:53:34,124 ~ WaterMeter|motion|still
+2021-09-23 20:53:34,942 ~ Garage|motion|moving
+2021-09-23 20:53:35,352 ~ Garage|motion|still
+2021-09-23 20:53:35,966 ~ Garage|motion|moving
+2021-09-23 20:53:36,274 ~ Garage|motion|still
+2021-09-23 20:53:38,834 ~ Garage|motion|moving
+2021-09-23 20:53:39,147 ~ Garage|motion|still
+2021-09-23 20:53:39,449 ~ Garage|motion|moving
+2021-09-23 20:53:41,704 ~ Garage|motion|still
+2021-09-23 20:53:49,387 ~ DownstairsDoor|motion|moving
+2021-09-23 20:53:49,388 ~ Garage|motion|moving
+2021-09-23 20:53:49,615 ~ Garage|motion|still
+2021-09-23 20:53:50,099 ~ DownstairsDoor|motion|still
+2021-09-23 20:53:50,508 ~ DownstairsDoor|motion|moving
+2021-09-23 20:53:50,510 ~ Garage|motion|moving
+2021-09-23 20:53:50,701 ~ Garage|motion|still
+2021-09-23 20:53:51,122 ~ DownstairsDoor|motion|still
+2021-09-23 20:53:51,941 ~ DownstairsDoor|motion|moving
+2021-09-23 20:53:51,969 ~ Garage|motion|moving
+2021-09-23 20:53:52,179 ~ Garage|motion|still
+2021-09-23 20:53:52,562 ~ DownstairsDoor|motion|still
+2021-09-23 20:53:57,676 ~ DownstairsDoor|motion|moving
+2021-09-23 20:53:58,496 ~ DownstairsDoor|motion|still
+2021-09-23 20:54:04,649 ~ Grapes|motion|moving
+2021-09-23 20:54:05,049 ~ Grapes|motion|still
+2021-09-23 20:54:05,147 ~ Grapes|motion|moving
+2021-09-23 20:54:07,916 ~ Grapes|motion|still
+2021-09-23 20:54:08,026 ~ Grapes|motion|moving
+2021-09-23 20:54:08,146 ~ Grapes|motion|still
+2021-09-23 20:54:11,398 ~ Driveway Mailbox|motion|moving
+2021-09-23 20:54:12,012 ~ Driveway Mailbox|motion|still
+2021-09-23 20:54:13,039 ~ Driveway Mailbox|motion|moving
+2021-09-23 20:54:13,246 ~ Driveway Mailbox|motion|still
+2021-09-23 20:54:13,433 ~ Driveway Mailbox|motion|moving
+2021-09-23 20:54:14,267 ~ Driveway Mailbox|motion|still
+2021-09-23 20:54:15,085 ~ Driveway Mailbox|motion|moving
+2021-09-23 20:54:17,132 ~ Driveway Mailbox|motion|still
+2021-09-23 20:54:22,867 ~ Garage|Temp|75 F
+2021-09-23 20:54:26,453 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|213.68
+2021-09-23 20:54:26,660 ~ Garage|motion|still
+2021-09-23 20:58:32,518 ~ Garage|motion|moving
+2021-09-23 20:58:32,927 ~ Garage|motion|still
+2021-09-23 21:07:32,783 ~ JeffOffice|Temp|76 F
+2021-09-23 21:16:44,839 ~ BackDeck|Temp|61 F
+2021-09-23 21:17:32,542 ~ JeffOffice|Temp|75 F
+2021-09-23 21:24:23,685 ~ Garage|Temp|74 F
+2021-09-23 21:46:44,848 ~ BackDeck|Temp|60 F
+2021-09-23 22:07:11,270 ~ Driveway Mailbox|motion|moving
+2021-09-23 22:07:11,389 ~ Driveway Mailbox|motion|still
+2021-09-23 22:07:11,462 ~ Driveway Mailbox|motion|moving
+2021-09-23 22:07:14,238 ~ Driveway Mailbox|motion|still
+2021-09-23 22:07:14,545 ~ Driveway Mailbox|motion|moving
+2021-09-23 22:07:15,979 ~ Driveway Mailbox|motion|still
+2021-09-23 22:07:17,623 ~ Driveway Mailbox|motion|moving
+2021-09-23 22:07:19,288 ~ Driveway Mailbox|motion|still
+2021-09-23 22:07:20,281 ~ Driveway Mailbox|motion|moving
+2021-09-23 22:07:20,359 ~ Driveway Mailbox|motion|still
+2021-09-23 22:07:22,743 ~ Grapes|motion|moving
+2021-09-23 22:07:22,964 ~ Grapes|motion|still
+2021-09-23 22:07:24,479 ~ Grapes|motion|moving
+2021-09-23 22:07:25,401 ~ Grapes|motion|still
+2021-09-23 22:07:25,521 ~ Grapes|motion|moving
+2021-09-23 22:07:25,913 ~ Grapes|motion|still
+2021-09-23 22:07:26,028 ~ Grapes|motion|moving
+2021-09-23 22:07:26,635 ~ Grapes|motion|still
+2021-09-23 22:07:27,244 ~ Grapes|motion|moving
+2021-09-23 22:07:27,551 ~ Grapes|motion|still
+2021-09-23 22:07:28,072 ~ Grapes|motion|moving
+2021-09-23 22:07:28,370 ~ Grapes|motion|still
+2021-09-23 22:08:00,013 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:00,633 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:01,439 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:02,469 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:02,878 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:04,107 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:05,131 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:05,951 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:06,976 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:07,589 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:08,618 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:09,234 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:13,433 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:14,143 ~ DownstairsDoor|motion|still
+2021-09-23 22:08:18,443 ~ Garage|motion|moving
+2021-09-23 22:08:18,763 ~ Garage|motion|still
+2021-09-23 22:08:36,472 ~ DownstairsDoor|motion|moving
+2021-09-23 22:08:36,473 ~ Garage|motion|moving
+2021-09-23 22:08:36,677 ~ Garage|motion|still
+2021-09-23 22:08:37,287 ~ DownstairsDoor|motion|still
+2021-09-23 22:09:06,367 ~ Garage|motion|moving
+2021-09-23 22:09:06,688 ~ Garage|motion|still
+2021-09-23 22:09:06,732 ~ Garage|motion|moving
+2021-09-23 22:09:10,463 ~ Garage|motion|still
+2021-09-23 22:09:20,295 ~ Garage|motion|moving
+2021-09-23 22:09:20,467 ~ Garage|motion|still
+2021-09-23 22:09:23,161 ~ Garage|motion|moving
+2021-09-23 22:09:23,306 ~ Garage|motion|still
+2021-09-23 22:09:25,823 ~ Garage|motion|moving
+2021-09-23 22:09:26,131 ~ Garage|motion|still
+2021-09-23 22:09:27,462 ~ Garage|motion|moving
+2021-09-23 22:09:27,592 ~ Garage|motion|still
+2021-09-23 22:09:31,353 ~ Garage|motion|moving
+2021-09-23 22:09:31,660 ~ Garage|motion|still
+2021-09-23 22:09:31,799 ~ Garage|motion|moving
+2021-09-23 22:09:32,070 ~ Garage|motion|still
+2021-09-23 22:09:32,787 ~ Garage|motion|moving
+2021-09-23 22:09:33,023 ~ Garage|motion|still
+2021-09-23 22:09:34,432 ~ Garage|motion|moving
+2021-09-23 22:09:34,615 ~ Garage|motion|still
+2021-09-23 22:09:37,087 ~ Garage|motion|moving
+2021-09-23 22:09:37,399 ~ Garage|motion|still
+2021-09-23 22:09:38,112 ~ Garage|motion|moving
+2021-09-23 22:09:38,180 ~ Garage|motion|still
+2021-09-23 22:09:43,436 ~ Garage|motion|moving
+2021-09-23 22:09:43,569 ~ Garage|motion|still
+2021-09-23 22:09:49,581 ~ DownstairsDoor|motion|moving
+2021-09-23 22:09:50,613 ~ DownstairsDoor|motion|still
+2021-09-23 22:11:01,260 ~ Garage|motion|moving
+2021-09-23 22:11:01,414 ~ Garage|motion|still
+2021-09-23 22:14:23,494 ~ Garage|motion|moving
+2021-09-23 22:14:24,353 ~ Garage|motion|still
+2021-09-23 22:19:11,348 ~ WaterMeter|motion|moving
+2021-09-23 22:20:40,262 ~ WaterMeter|motion|still
+2021-09-23 22:24:23,669 ~ Garage|Temp|72 F
+2021-09-23 22:24:45,767 ~ Garage|Temp|72 F
+2021-09-23 22:24:49,680 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|215.19
+2021-09-23 22:24:49,785 ~ Garage|motion|still
+2021-09-23 22:26:44,891 ~ BackDeck|Temp|59 F
+2021-09-23 22:54:46,717 ~ Garage|Temp|73 F
+2021-09-23 22:55:09,952 ~ Garage|Temp|73 F
+2021-09-23 22:55:13,527 ~ Garage|Restart|rpi08|RPi|192.168.86.34|860|215.69
+2021-09-23 22:55:13,689 ~ Garage|motion|still
+2021-09-23 23:02:20,234 ~ WaterMeter|motion|moving
+2021-09-23 23:03:46,863 ~ WaterMeter|motion|still
+2021-09-23 23:06:44,963 ~ BackDeck|Temp|58 F
+2021-09-23 23:19:38,165 ~ WaterMeter|motion|moving
+2021-09-23 23:23:07,677 ~ WaterMeter|motion|still
+2021-09-23 23:24:02,773 ~ WaterMeter|motion|moving
+2021-09-23 23:25:44,144 ~ WaterMeter|motion|still
+2021-09-23 23:26:13,172 ~ WaterMeter|motion|moving
+2021-09-23 23:29:53,184 ~ WaterMeter|motion|still
+2021-09-23 23:32:09,172 ~ WaterMeter|motion|moving
+2021-09-23 23:33:31,705 ~ WaterMeter|motion|still
+2021-09-23 23:35:20,665 ~ WaterMeter|motion|moving
+2021-09-23 23:36:50,778 ~ WaterMeter|motion|still
+2021-09-23 23:43:21,124 ~ WaterMeter|motion|moving
+2021-09-23 23:44:43,705 ~ WaterMeter|motion|still
+2021-09-23 23:46:13,054 ~ WaterMeter|motion|moving
+2021-09-23 23:48:49,625 ~ WaterMeter|motion|still
+2021-09-23 23:56:44,893 ~ BackDeck|Temp|57 F
+2021-09-23 23:57:32,691 ~ JeffOffice|Temp|74 F

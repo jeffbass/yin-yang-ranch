@@ -60,5 +60,4 @@ Icon
 # Various data files that don't need to be in the git repository
 *.npy
 *.swp
-*.log*
 *stdout
