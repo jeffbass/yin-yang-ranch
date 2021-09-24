@@ -1,0 +1,35 @@
+# Settings file librarian.yaml -- example with lots of settings
+---
+librarian:
+  name: Susan
+  queuemax: 50
+  patience: 10
+  heartbeat: 10
+  log_directory: /home/jeffbass/imagehub_data/logs # see below for alternatives
+  log_file: imagehub.log
+  data_directory: librarian_data
+  print_settings: False
+  stall_watcher: False
+  send_threading: False
+comm_channels:
+  CLI:
+    port: 5557
+    protocol: zmq
+  gmail:
+    port: 5559
+    contacts: contacts.txt
+    mail_check_seconds: 5
+schedules:
+    reminders:
+      send_sms_phone_calls:  # this can be any reminder name
+        days: all  # or name a weekday like Tuesday
+        times: ['10:56', '12:56', '14:56', '16:56']  # times must be in quotes
+        channel: gmail_sms
+        phone: '8055551212'
+        message: Call your dad to check on him
+      send_sms_change_batteries:
+        days: all
+        times: ['23:05']  # times must be in quotes
+        channel: gmail_sms
+        phone: '8055551212'
+        message: Swap nighttime rechargeable battery in Drivway Cam!
