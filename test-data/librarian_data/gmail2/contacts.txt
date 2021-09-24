@@ -1,0 +1,2 @@
+name|full_name|canonical_name|mobile_phone|email
+Jeff|Jeff Bass|jeff_bass|8055551212|jeffbass@example.com
