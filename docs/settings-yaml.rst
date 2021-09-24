@@ -43,7 +43,6 @@ Here is an example ``librarian.yaml`` file where options have been specified:
   comm_channels:
     CLI:
       port: 5557
-      protocol: zmq
     gmail:
       port: 5559
       contacts: contacts.txt
@@ -169,5 +168,55 @@ data are in the ``gmail`` and ``gmail2``. These directories contain credentials
 and related data to run the Google Voice / Gmail communications channel. There
 is an example ``librarian_data`` directory in the ``test-data`` folder in this
 directory.
+
+comm_channels: Settings details
+===============================
+
+There must be at least 1 comm_channel specified. For testing, you should
+start with the ``CLI`` channel which is used by the ``CLI_chat.py`` text query
+program. You can delete or comment out the channel you are not using.
+
+.. code-block:: yaml
+
+  comm_channels:
+    CLI:
+      port: 5557
+    gmail:
+      port: 5559
+      contacts: contacts.txt
+      mail_check_seconds: 5
+
+The comm channel ports are the ZMQ port numbers used by the librarian. They
+must be different from the ports used for **imagenode** to **imagehub**
+communication if an **imagehub** is running on the same computer as the.
+And, if you use multiple comm channels (like CLI and Gmail), they must use and
+specify different port numbers.
+
+The Gmail communication channel is used by the Google Voice SMS texting system
+that I use to query the librarian. As mentioned elsewhere, the Gmail / Google
+Voice SMS texting setup is hard to set up and debug. Not for the faint of heart.
+But, if you want to try it, you'll need to specify what ZMQ port to use, the
+name of the contacts file (containing a list of allowed inbound texting numbers)
+and how often you want ``gmail_watcher.py`` to check for new messages.
+
+schedules: Settings details
+===========================
+
+Scheduling of things like backups, object detection updates, etc. have their
+settings in this part of the ``librarian.yaml`` file. The ``schedules`` section
+of the yaml files is  included as an illustration of possible **librarian**
+options.
+
+Since the **librarian** has timing threads and SMS texting capability, I set
+up a simple "scheduled SMS text reminder" function as another way to use it. It
+was put into the **librarian** prototype as a simple test of the use of
+schedules. The settings in the example yaml file show how a couple of these
+would be specified. Using this feature assumes that the Gmail / Google Voice
+capability is working. If it's not, then this schedules section needs to be
+deleted from the yaml file.
+
+Other scheduled functions, such as scheduled backups, are not present in the
+**librarian** prototype in this repository. I'm using bash and systemd
+methods for these now, but hope to include them in future **librarian** versions.
 
 `Return to main documentation page README.rst <../README.rst>`_
