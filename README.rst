@@ -20,7 +20,7 @@ For more about that see `yin-yang-ranch issue 2. <https://github.com/jeffbass/yi
 Introduction
 ============
 
-This repository is a collection of Python programs and Raspberry Pi hardware
+This project is a collection of Python programs and Raspberry Pi hardware
 projects to help manage a small urban permaculture farm called **Yin Yang Ranch**.
 The 2 acre farm is an ongoing science project to build living soil, capture rain
 in barrels, and grow a variety of plants and fruit trees that can feed birds,
@@ -46,6 +46,7 @@ meter) and irrigation valves.
 I currently have 4 repositories on GitHub:
 
 1. **yin-yang-ranch**: this repository. Overall project design and goals.
+   It also cotains some of **librarian** prototype code.
 2. `imageZMQ: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 4. `imagehub: Receive and Store Images and Event Logs. <https://github.com/jeffbass/imagehub>`_
@@ -57,11 +58,11 @@ soil temperatures). **imagehub** runs on a Mac or a Linux computer and receives
 images and event messages from 8-10 Raspberry Pi computers simultaneously.
 I use a variety of computer vision techniques implemented
 in Python. I have programs that can read the water meter. Or tell if that
-critter moving behind the barn is a coyote or a racoon.
+critter moving behind the barn is a coyote or a raccoon.
 
 I also have a website at `yin-yang-ranch.com <https://www.yin-yang-ranch.com/>`_
-that will display some dashboards on weather, compost temperatures,
-solar power generation and when the last coyote was spotted. It is mostly a few
+that will someday display some dashboards on weather, compost temperatures,
+solar power generation and when the last coyote was spotted. It is just a few
 pictures of the ranch for now while I am developing the dashboard software.
 
 .. contents::
@@ -91,13 +92,16 @@ The project contains code repositories for each part of the design shown above:
 
 - **imagenode**: image capture on Raspberry Pi and other computers using PiCameras,
   webcams and various OpenCV techniques for image rotation, threshholding,
-  dilation, differencing and motion detection.
+  dilation, differencing and motion detection. Also sends sensor data, such as
+  temperature and humidity, from sensors attached to the RPi's.
   See `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 - **imageZMQ**: Python classes that transport OpenCV images from imagenodes to
-  imagehubs.
+  imagehubs. The imageZMQ package is pip installable.
   See `imagezmq: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 - **imagehub**: receives event messages, images and sensor data from multiple
-  Raspberry Pi and other computers via imagezmq.
+  Raspberry Pi and other computers via imagezmq. Stores them to disk files. Note
+  that the **imagenodes** don't store any data to the RPi SD cards, but send all
+  their data to the **imagehub** for storage.
   See `imagehub: Receiving and saving images and event data from multiple Raspberry Pi's. <https://github.com/jeffbass/imagehub>`_
 - **librarian**: reads the **imagehub** event logs and stored
   images to answer questions about them. A prototype of the **librarian** code
@@ -109,18 +113,22 @@ The project contains code repositories for each part of the design shown above:
 - **commhub**: provides a very simple natural language interface for answering
   questions about events and images (is the water running? was a coyote sighted
   today?). It parses the inbound questions and provides simple answers using data
-  from the imagehub event logs. The **commhub** has methods for different
+  from the **imagehub** event logs. The **commhub** has methods for different
   channels of communication with end users. The prototype **commhub** code in
   this repository implements 2 communications channels: 1) SMS texting (using Google
   Voice and its Gmail interface) and 2) a terminal window CLI text interface.
-- **commagents**: are separate Python programs connects each communication channel
+- **commagents**: are separate Python programs connecting each communication channel
   to the **commhub**. For example, an SMS/texting agent (example shown above),
   is implemented as ``gmail_watcher.py`` in this repository. Future **commagents**
-  such as an email agent and a webchat agent are being developed.
+  such as a Twilio SMS texting agent, an email agent and a webchat agent are
+  being developed.
 - **yin-yang-ranch** (*this GitHub repository*): contains overall project
   documentation and design. This repository also contains prototype Python
   programs for the **librarian**, **commhub** and an example **commagent**. It
   also contains example programs that monitor the health status of **imagenodes**.
+  It also contains example data in the test-data folder. That folder contains
+  real **imagehub** logs and captured images from my farm (including images of
+  coyotes, a bobcat, the mail truck and an Amazon delivery ;-)
 
 This distributed design allows each computer to do what it does best. A
 Raspberry Pi with a PiCamera can watch a water meter for needle motion, then
@@ -235,13 +243,17 @@ early experiments have provided a lot of data to help with design
 changes and code refactoring. I have pushed the **imageZMQ**, **imagenode**
 and **imagehub** as separate repositories on GitHub (see links above).
 
-The **librarian** and communications programs have prototypes in this repository
-`Driveway Camera Hardware Example. <docs/driveway-hardware.rst>`_
+The **librarian** and its communications programs have prototypes in this
+repository. They are documented `here. <docs/librarian-prototype.rst>`_
+The **librarian** is currently being refactored with a new design, but the
+prototype is what was used to generate the SMS texting example above. It has
+been running for about 3 years. It will eventually be pushed to its own
+GitHub repository.
 
 The `imageZMQ repository <https://github.com/jeffbass/imagezmq>`_
 contains test programs that show how images can be sent from multiple Raspberry
 Pi computers simultaneously to a hub computer. The **imagenode** and **imagehub**
-programs are evolutions of
+programs are evolutions of the **imageZMQ** test programs
 `timing_send_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_send_jpg_buf.py>`_
 and
 `timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
@@ -254,12 +266,15 @@ Contributing
 ============
 The **yin-yang-ranch** projects are in very early development and testing. I
 welcome questions and comments.  The easiest way to make a comment or ask a
-question about the project is to open an issue.
+question about the project is to open an issue. If your issue is specific to
+**imageZMQ**, **imagenode** or **imagehub**, it will be easiest if you open
+an issue in the appropriate project. Issues about the overall project design or
+about my PyCon 2020 presentation should go into this repository.
 
 An Excellent Alternative Design for an imagehub & librarian combination
 =======================================================================
 An ``imagenode`` & ``imagehub`` user and code contributor @sbkirby has designed
-a completely different approach to building an imagehub and librarian
+a completely different approach to building an **imagehub** and **librarian**
 combination using a broad mix of tools in addition to Python including Node-Red,
 MQTT, MariaDB and OpenCV in Docker containers. He has posted it in this
 `Github repository <https://github.com/sbkirby/imagehub-librarian>`_.
