@@ -1,0 +1,24 @@
+# librarian service unit file
+# Jeff Bass, jeff@yin-yang-ranch.com
+# Defines librarian.py as a systemd service
+# This file should be copied to /etc/systemd/system as root
+#   e.g. sudo cp librarian.service /etc/systemd/system
+# Use usual systemctl start, stop, status restart, enable commands
+#   e.g. sudo systemctl restart librarian.service
+#
+
+[Unit]
+Description=Librarian Service
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/home/jeffbass/SDBops2/librarian/librarian
+User=jeffbass
+Restart=always
+RestartSec=20
+ExecStart=/home/jeffbass/.virtualenvs/py37cv4/bin/python -u \
+    /home/jeffbass/SDBops2/librarian/librarian/librarian.py
+
+[Install]
+WantedBy=multi-user.target

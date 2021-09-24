@@ -1,0 +1,26 @@
+# gmail_watcher service unit file
+# Jeff Bass, jeff@yin-yang-ranch.com
+# Defines gmail_watcher.py as a systemd service
+# This file should be copied to /etc/systemd/system as root
+#   e.g. sudo cp gmail_watcher.service /etc/systemd/system
+# Use usual systemctl start, stop, status restart, enable commands
+#   e.g. sudo systemctl restart gmail_watcher.service
+#
+# gmail_watcher.service runs after librarian.service since gmail_watcher
+#     sends messages to librarian via ZMQ REQ/REP
+
+[Unit]
+Description=Gmail Watcher Service
+After=multi-user.target librarian.service
+
+[Service]
+Type=idle
+WorkingDirectory=/home/jeffbass/SDBops2/librarian/librarian
+User=jeffbass
+Restart=always
+RestartSec=20
+ExecStart=/home/jeffbass/.virtualenvs/py37cv4/bin/python -u \
+    /home/jeffbass/SDBops2/librarian/librarian/gmail_watcher.py
+
+[Install]
+WantedBy=multi-user.target
