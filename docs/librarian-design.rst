@@ -186,33 +186,39 @@ Here are a few examples.
 does this very efficiently (without reading the entire file) and works fine on
 a text file that is still being appended to by another program. The **librarian**
 uses a subprocess to call the ``tail`` utility to grab the most recent
-**imagehub** event log lines as they are being added. See the yy method in
-module xx.
+**imagehub** event log lines as they are being added. See the ``log_tail``
+method in the ``data_tools.py`` module in the ``helpers``.
 
 ``rsync``: This Linux utility can copy files and directories from one computer
 to another in a "smart" way that only copies changes. It is one of the most
 powerful Linux utilities. It can update only the parts of a text file that have
 changed. I use it for backups of all my **imagehub** and **librarian** data.
+Here is what a archive style incremental backup of the **imagehub** data to
+an external drive looks like::
+
+  $ rsync -a imagehub_data/ /media/jeffbass/Linux250/imagehub_data
+
 
 ``systemctl``: This Linux utility is used to launch **imagenodes**, **imagehubs**,
 the **librarian**, the comm agents like ``gmail_watcher.py`` and the various
 object detectors that analyze the images written by the **imagehub**. It allows
 the **librarian** HealthMonitor programs to restart **imagenodes** that are
-hung or behaving badly.
+hung or behaving badly. An example of this use is in the
+``nodewatcher.py`` module in the ``helpers`` folder.
 
 My own current workflow is a mashup of Python programs and bash / terminal
 commands that allow me to look at logs and images on my Mac screen using its
 QuickLook capability in the Finder. Some of these things will be incorporated
 into future versions of the **librarian**. Here are a couple of examples.
 
-"ssh of logs to current machine"::
+ssh of **imagehub** logs to current my Mac::
 
-  $ ssh jeff-thinkpad "cat /home/jeffbass/imagehub_data/logs/*log.2021-09-21 /home/jeffbass/imagehub_data/logs/*log"
+  $ ssh 192.168.86.71 "cat /home/jeffbass/imagehub_data/logs/*log.2021-09-21 /home/jeffbass/imagehub_data/logs/*log"
 
 This allows me to review an **imagehub** log in real time, even when it the
 **imagehub** is running on another computer.
 
-"scp of selected images from **imagehub** to my Mac"::
+scp of selected images from **imagehub** to my Mac::
 
     $ scp 192.168.86.71:/home/jeffbass/imagehub_data/images/2021-09-21/[^W]*T1* .
 
@@ -249,7 +255,7 @@ can (optionally) include a non-text portion, such as a jpg image or an audio
 clip. By requiring EVERY message to or from the Librarian to use this
 tuple format, there is no need for an if statement about message type (text
 only or binary only or text and binary). When the binary portion is unneeded,
-a single byte bytearray is used as a placeholder.
+a single byte ``bytearray`` is used as a placeholder.
 
 The text portion of each message is either simple text OR text followed by
 one more more text fields that specify things like sender or messageId that
