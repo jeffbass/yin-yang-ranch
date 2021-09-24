@@ -4,13 +4,10 @@ librarian:
   name: Susan
   queuemax: 50
   patience: 10
-  heartbeat: 10
   log_directory: /home/jeffbass/imagehub_data/logs # see below for alternatives
   log_file: imagehub.log
   data_directory: librarian_data
   print_settings: False
-  stall_watcher: False
-  send_threading: False
 comm_channels:
   CLI:
     port: 5557
@@ -32,4 +29,4 @@ schedules:
         times: ['23:05']  # times must be in quotes
         channel: gmail_sms
         phone: '8055551212'
-        message: Swap nighttime rechargeable battery in Drivway Cam!
+        message: Swap nighttime rechargeable battery in Driveway Cam!

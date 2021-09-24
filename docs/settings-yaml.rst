@@ -60,7 +60,7 @@ Here is an example ``librarian.yaml`` file where options have been specified:
           times: ['23:05']  # times must be in quotes
           channel: gmail_sms
           phone: '8055551212'
-          message: Swap nighttime rechargeable battery in Drivway Cam!
+          message: Swap nighttime rechargeable battery in Driveway Cam!
 
 =============================
 YAML file names and locations
