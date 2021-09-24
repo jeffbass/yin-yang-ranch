@@ -1,6 +1,6 @@
-=============================================================
-The Librarian program design, pseudo code and data structures
-=============================================================
+===================================================================
+The Librarian program design, pseudo code and a development roadmap
+===================================================================
 
 Introduction
 ============
@@ -15,8 +15,8 @@ by the **imagenodes**.
 
 .. contents::
 
-Overview of the Librarian beyond the prototype
-==============================================
+Overview of the Librarian development beyond the prototype
+==========================================================
 
 The **librarian** prototype has limited functionality. It can:
 
@@ -26,7 +26,9 @@ The **librarian** prototype has limited functionality. It can:
 - Include information about a previous state ("water is off; last time flowing was 5:03pm").
 - Answer questions about sensor readings ("Inside temperature?")
 - The **librarian** prototype uses the Linux ``tail`` utility to continually add
-  new events as they are added in the **imagehub**.
+  new events as they are added in the **imagehub**. The **librarian** is limited
+  to watching the event log of a single **imagehub** running on the same
+  computer as the **librarian**.
 
 All of the **librarian** prototype capbilities involve answering questions about
 recent events in the **imagehub** events log.
@@ -45,10 +47,10 @@ image / object label files that are written by object detection programs that
 continuously scan the images in the **imagehub** as they are written. The object
 detection programs run on a separate computer. They read the **imagehub** image
 files, do object detection on those files and then write description labels to
-files that are in the ``librarian_data`` directory. An example of a
-``detected-objects.txt`` file is in the ``test-data`` folder in this repository.
-The **librarian** uses these detected object label files to answer questions
-about what objects have been seen and when.
+files that are in the ``librarian_data`` directory. The **librarian** uses these
+detected object label files to answer questions about what objects have been
+seen and when. The **librarian** prototype in this repository does not have a
+capability for reporting on detected objects.
 
 Librarian Pseudo Code outline and Classes
 =========================================
@@ -99,16 +101,124 @@ Helper programs that interact with Libarian::
     **imagehubs** and the **librarian** for failures, restarting processes,
     programs and computers as needed.
 
-Use of simple text and image files rather than a database
-=========================================================
+Librarian main program is simple event loop for user queries
+============================================================
+
+The **librarian** main program is a simple event loop that watches for and responds
+to user queries. Here is the Librarian main program.
+
+.. code-block:: python
+
+  def main():
+      try:
+          settings = Settings()  # get settings for hubs, communications channels
+          librarian = Librarian(settings)  # start all the librarian processes
+          # forever event loop
+          while True:
+              # for each initialized librarian communications channel
+              for channel in librarian.comm_channels:
+                  # Listen for and respond to incoming questions
+                  request = channel.next_query()
+                  if request:
+                      reply = librarian.compose_reply(request)
+                      channel.send_reply(reply)
+                  time.sleep(1)  # sleep before next channel check
+
+      except (KeyboardInterrupt, SystemExit):
+          log.warning('Ctrl-C was pressed or SIGTERM was received.')
+
+Each request is tagged by the sender, communication channel, thread and message
+IDs, etc. After the chatbot has composed a reply using available data, it uses these
+tags to route the reply appropriately. The system can handle multiple
+simultaneous senders and messages using ZMQ message queues to manage
+concurrency. It works in much the same way as having multiple imagenodes
+sending to a single imagehub. It works fine for up to a dozen senders, but
+would get slow at a higher numbers of senders.
+
+An alternative is to use a Python package such as Flask to manage messaging.
+It would probably scale to a higher number of senders.
+
+The Librarian uses text and image files rather than a database
+==============================================================
 
 One design feature of the **librarian** is that it does not use any formal
-database. Instead it uses simple text files (like the **imagehub** event logs)
-to store data. These simple text files are read on an as-needed basis into
-Python data structures in program memory. Image files are kept in
-directories that are nested by date. The image content and object label files
-that are created from the images are also kept in simple text files. The
-computer's file system itself is the "database" of the **librarian**.
+database. (Depending on your point of view, this might be a design flaw instead
+of a design feature ;-) Instead of using a database, the **librarian** uses
+simple text files (like the **imagehub** event logs) to store data and
+communicate between programs. These simple text files are read on an as-needed
+basis into Python data structures in **librarian** program memory. Image files
+are placed by the **imagehub** in directories that are nested by date. The image
+object label files that are created from the images are also kept in simple text
+files.
+
+The Yin Yang Ranch overall design reflects my own personal "bias of familiarity".
+I have been using Unix utilities as filters for workflow pipelines of text files
+for 50 years. For the Yin Yang Ranch sparse data matrix, a “graph” data structure
+is optimal. The Unix OS file system is a "graph" tree database with a root (/)
+node. Everything is a branch from the root. And there is a Unix common practice:
+don’t use dedicated database software unless you really need to; for many
+projects you can use the Unix OS file system as a database. The Unix file system
+is very hardened & reliable & just as ACID as any other database (if you use it
+the way it is designed to be used).
+
+The **librarian** is part of a "mostly text" pipleline data flow::
+
+ imagenodes —> imageZMQ —> imagehub -> events_text_files -> librarian -> SMS_texts
+                               |                                ^
+                          image_files                 detected_objects_files
+                               v                                ^
+                               |-----> object_detectors ------->|
+
+The ``object_detector`` programs read the image_files from the **imagehub**
+data directories and produce ``detected_objects_files`` that can be used by the
+**librarian** to answer queries. (The **librarian** prototype version in this
+GitHub repository does not read ``detected_objects_files``).
+
+The Librarian uses native Linux utilities to perform common functions
+=====================================================================
+
+Native Linux utilities are very optimized and very fast. In a number of cases,
+they are much faster than a Python alternative. Calling these native utilities
+accomplishes many of the **librarian**'s functions as a separate subprocesses.
+Here are a few examples.
+
+``tail``: This Linux utility gets the last few lines from a text file. It does
+does this very efficiently (without reading the entire file) and works fine on
+a text file that is still being appended to by another program. The **librarian**
+uses a subprocess to call the ``tail`` utility to grab the most recent
+**imagehub** event log lines as they are being added. See the yy method in
+module xx.
+
+``rsync``: This Linux utility can copy files and directories from one computer
+to another in a "smart" way that only copies changes. It is one of the most
+powerful Linux utilities. It can update only the parts of a text file that have
+changed. I use it for backups of all my **imagehub** and **librarian** data.
+
+``systemctl``: This Linux utility is used to launch **imagenodes**, **imagehubs**,
+the **librarian**, the comm agents like ``gmail_watcher.py`` and the various
+object detectors that analyze the images written by the **imagehub**. It allows
+the **librarian** HealthMonitor programs to restart **imagenodes** that are
+hung or behaving badly.
+
+My own current workflow is a mashup of Python programs and bash / terminal
+commands that allow me to look at logs and images on my Mac screen using its
+QuickLook capability in the Finder. Some of these things will be incorporated
+into future versions of the **librarian**. Here are a couple of examples.
+
+"ssh of logs to current machine"::
+
+  $ ssh jeff-thinkpad "cat /home/jeffbass/imagehub_data/logs/*log.2021-09-21 /home/jeffbass/imagehub_data/logs/*log"
+
+This allows me to review an **imagehub** log in real time, even when it the
+**imagehub** is running on another computer.
+
+"scp of selected images from **imagehub** to my Mac"::
+
+    $ scp 192.168.86.71:/home/jeffbass/imagehub_data/images/2021-09-21/[^W]*T1* .
+
+This allows me to copy some recent imgage files (but excluding the WaterMeter)
+to my Mac and then view them using the Mac Finder's QuickLook utility. A great
+way to do a quick scan of recent images from the cameras.
 
 Messaging protocol for messages sent to & from the Librarian
 ============================================================
@@ -120,7 +230,7 @@ it uses imageZMQ (as is done by the imagenode and imagehub programs). How this
 is done varies by Commmunication Channel (such as Gmail channel vs. CLI
 channel).
 
-All messages to and from the Librarian will have the following format::
+All messages to and from the Librarian have the following format::
 
   (text, binary_buffer)
 
@@ -130,7 +240,9 @@ The second part is a binary buffer that can be any of:
 1. An empty buffer with only a single byte as a place holder.
 2. A jpg_buffer that contains a compressed image in jpg format.
 3. Any other binary data that has been placed into a buffer, such as an
-   audio snippet.
+   audio snippet.  Listening for "coyote howls" and other sounds is an
+   ongoing experiment that involves developing "audionode" modules for
+   RPi's that is analogous to **imagenode**s.
 
 The advantage of using a tuple of (text, binary_buffer) is that every message
 can (optionally) include a non-text portion, such as a jpg image or an audio
@@ -160,6 +272,7 @@ loop. The reply composed by the librarian is then sent back as the REQ/REP
 message's REP portion. This means that there can be only 1 CLI sender / receiver
 client at a time. That means that each CLI must be closed before any second
 conversation can be started via the CLI channel.
+
 Since the CLI channel is only used for testing and development, this is
 "good enough". Having more than one CLI conversation at a time would require
 an outgoing ZMQ REP/REQ message pair in addition to the inbound REQ/REP pair.
@@ -169,7 +282,8 @@ for tcp address and port number. The default is the tcp address of the localhost
 which assumes the CLI_chat program is being run on the same computer as the
 librarian program. But any computer that can reach the librarian with a
 standard "tcp:port" address could be used.
-   There is a small "test program that simulates the Librarian" so the the
+
+There is a small "test program that simulates the Librarian" so the the
 CLI_chat.py can be more easily tested. It is named CLI_chat_echo_test. It uses
 the imageZMQ Hub class, so it needs to be started before the CLI_chat.py program.
 Both of these communication programs are in the libarian/helpers/comms folder
@@ -202,37 +316,81 @@ get_contacts() method in the Gmail class.
 Image analysis, object detection and label handling
 ===================================================
 
-As mentioned earlier, the **librarian** does not do any image analysis, object
+As mentioned earlier, the **librarian** does not do any image analysis or object
 detection in images or related work. Instead, the **librarian** expects files
 to be written and updated by multiple image analysis programs, often running
 on different computers. These programs read the images from the **imagehub**
 image directories, perform analysis and object detection and then write one line
 of text for each object detected to a ``detected-objects.txt`` file, which
-contains all the details of time, image, object name & ID, bounding box corners,
-etc. An example of a ``detected-objects.txt`` file is in the ``test-data``
-folder in this repository.
+contains various details of time, image, object name & ID, bounding box corners,
+etc. The **librarian** prototype in this repository does not have a
+capability for reporting on detected objects.
 
-My current object detectors are very simple and are modeled on programs that
-have appeared in the OpenCV blog and the PyImageSearch blog. One great example
+My current object detectors are quite simple and most of them are modeled on
+programs that have appeared the PyImageSearch blog. One great example
 is this PyImageSearch blog post about labelling objects in a live video stream:
 `Detecting dogs, persons and cars <https://www.pyimagesearch.com/2019/04/15/live-video-streaming-over-network-with-opencv-and-imagezmq/>`_
 (and as a bonus, the blog post uses my own imageZMQ package for sending and
 receiving images). Many of these programs are easily adapted to write object
 labels to a text file. My current object detection programs are mashups of Python
-and bash workflows. When I have cleaned them up and documented them, I will push
-them to their own GitHub repositories.
+and bash workflows. They currently require a lot of manual tweaking and tuning.
+When I have cleaned them up and documented them, I will push them to their own
+GitHub repositories.
 
-Improving the query / request parsing
-=====================================
+I know I mentioned this in the README, but it is worth mentioning again. I have
+found **PyImageSearch.com** to be the best resource for learning how to build
+computer vision programs in Python. It contains blog posts demonstrating many
+different object detection techniques. Adrian Rosebrock provides easy to follow
+explanations and detailed code Examples of many computer vision techniques
+can be found
+at `PyImageSearch.com <https://www.pyimagesearch.com/>`_. Highly recommended.
 
-The **librarian** currently uses a very simple "cascading-if-statements"
+Improving the query / request parsing using graph trees
+=======================================================
+
+The **librarian** prototype uses a very simple "cascading-if-statements"
 algorithm for parsing queries. The query "language" will always be simple
 compared to general purpose digital assistants. But the query language can
 be modeled as a Domain Specific Language (DSL) and then parsed with a more formal
 lexical analyzer and parser. These are currently under development. The
-current simple parser is contained in the ``chatbot.py`` module in the ``comms``
-folder in the ``helpers`` folder. The parser is "hard-wired" with location words
-like "barn", "back deck", etc. Building a formal DSL and associated parser will
-be a big improvement.
+current simple parser in the **librarian** prototype is contained in the
+``chatbot.py`` module in the ``comms`` folder in the ``helpers`` folder. The
+parser is "hard-wired" with location words like "barn", "back deck", etc.
+Building a formal DSL and associated parser will be a big improvement.
+
+In the next **librarian** version (currently in development), "request context"
+is part of the query parsing process. This is used to build an in-memory "graph
+data" structure that links "request context" with other query relationships. I
+am using the Python
+`networkx package. <https://networkx.org/documentation/stable/tutorial.html>`_
+for building a query structure and finding matches with the "available data"
+graph structure. An alternative would be to use more advanced Natural Language
+Processing (NLP) techniques to parse requests and compose replies, but the
+simple requirements of the **librarian** don't need anything that complex.
+
+Where the Librarian design is going...a Roadmap / Wishlist for the Future
+=========================================================================
+
+The **librarian** roadmap for the future reflects my own needs. What questions
+do I need to ask to help manage my small farm? The design of **librarian** is
+evolving and it will likely never be "done". This is more of a dream list than
+a roadmap, since I am unlikely to ever get all of these things coded.
+
+- The ability to send images in text messages. The **librarian** prototype can
+  only send text and not images. Sending images in SMS text messages
+  is possible using Twilio, but I have done any work on this yet. ("Person seen
+  in driveway. Image attached.")
+- The ability to spot patterns and report on them. Especially regarding water
+  usage. ("Water usage today was higher than for the last 7 days.")
+  ("Water flowing in the last 2 hours is consistent with previous usage for
+  watering the avocados.")
+- The ability to report history in more general ways. ("Coyotes were seen 3
+  times in the last week. Weekly average is 2.")
+- What specific vehicles were seen. ("The mail truck was seen in the driveway
+  at 4:15pm.")
+- Where I might need to water based on analysis of images of plants. ("The
+  leaves of fig tree are drooping.")
+- Common patterns seen across different cameras. ("Amazon truck seen in driveway
+  and front sidewalk area. Person seen in front sidewalk area.")
 
 `Return to main documentation page README.rst <../README.rst>`_
