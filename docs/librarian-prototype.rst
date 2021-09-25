@@ -28,7 +28,7 @@ The **librarian** prototype has limited functionality. It can:
 
 For example, here is a text message exchange with "Susan", my librarian bot:
 
-.. image:: /docs/images/text-messaging.png
+.. image:: ../images/text-messaging.png
 
 That is a screen shot from a phone that had texted the "Susan" Google Voice phone
 number that was being watched by the **librarian** prototype. The **librarian** code
