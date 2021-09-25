@@ -169,7 +169,7 @@ The steps to run the **librarian** prototype this way are::
    example (the query words are suitable for the ``imagehub_data`` in the
    ``test-data`` folder in this repository):
 
-   .. code-block:: bash
+   .. code-block::
 
       (py37cv4) jeffbass@jeff-thinkpad:~/librarian/librarian/helpers/comms$ python CLI_chat.py
       Default Librarian address is: tcp://localhost:5557
@@ -241,7 +241,7 @@ familiar to you:
    wil go once you run your own credentialing process.
 10. Make sure there is a copy of your edited ``contacts.txt file`` in each
     of those directories. Yes, it needs to be in both places. Dumb. But I
-    haven't fixed it yer.
+    haven't fixed it yet.
 11. Run the **librarian** program:
 
     .. code-block:: bash
@@ -251,11 +251,13 @@ familiar to you:
        python librarian.py
 
     The first time you run this program, a web browser will open for you to
-    use your google login to approve the Gmail API, so you must be running on
-    a computer that can bring up a web browser when the API credential
-    creation process runs.
+    use your Google login to approve the Gmail API, so you must be running on
+    a computer that can bring up a web browser when the Gmail API credential
+    creation process runs. This authenticates the SENDING of SMS text messages
+    via the Gmail API.
 
-12. Then run the gmail_watcher.py program to "chat" with the librarian by sending
+12. Then run the ```gmail_watcher.py`` program. After a few minutes, you will
+    be able to "chat" with the librarian by sending
     SMS text numbers to the Google Voice number you set up:
 
     .. code-block:: bash
@@ -267,7 +269,10 @@ familiar to you:
     The first time you run this program, a web browser will open for you to
     use you google login to approve the Gmail API, so you must be running on
     a computer that can bring up a web browser when the API credential
-    creation process runs.
+    creation process runs. This authenticates the RECEIVING of SMS text messages
+    via the Gmail API. The settings in ``librarian.yaml`` determine how often
+    ``gmail_watcher.py`` checks for new messages using the Gmail API. The
+    default is every 5 seconds.
 
 15. Use a phone to send a text query to the Google Voice number and it will
     send a reply just like the ``CLI_chat.py`` program did.
