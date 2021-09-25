@@ -164,11 +164,12 @@ The steps to run the **librarian** prototype this way are::
       workon py3cv3
       python CLI_chat.py
 
-6. You will then enter query words suitable for your imagehub_data events log.
+6. You will then enter query words suitable for your ``imagehub_data`` events log.
    The Librarian will respond with answers from the events log. Here is an
-   example:
+   example (the query words are suitable for the ``imagehub_data`` in the
+   ``test-data`` folder in this repository):
 
-   .. code-block::
+   .. code-block:: bash
 
       (py37cv4) jeffbass@jeff-thinkpad:~/librarian/librarian/helpers/comms$ python CLI_chat.py
       Default Librarian address is: tcp://localhost:5557
