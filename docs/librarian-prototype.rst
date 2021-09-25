@@ -302,6 +302,6 @@ settings for the user query communications channels, location of "allowed users"
 lists, etc. The settings are put in a YAML file at the home directory level. An
 example YAML file is included in the the same directory as the README.rst file.
 A description of the ``librarian.yaml`` file and how to adjust its settings
-is in `Librarian Settings and YAML files <docs/settings-yaml.rst>`_.
+is in `Librarian Settings and YAML files <settings-yaml.rst>`_.
 
 `Return to main documentation page README.rst <../README.rst>`_
