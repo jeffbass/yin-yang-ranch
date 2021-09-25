@@ -4,8 +4,8 @@ librarian:
   name: Susan
   queuemax: 50
   patience: 10
-  log_directory: /home/jeffbass/imagehub_data/logs # see below for alternatives
-  log_file: imagehub.log
+  log_directory: /home/jeffbass/imagehub_data/logs # directory for imagehub logs
+  log_file: imagehub.log  # file name of the imagehub log file
   data_directory: librarian_data
   print_settings: False
 comm_channels:
@@ -23,7 +23,7 @@ schedules:
         times: ['10:56', '12:56', '14:56', '16:56']  # times must be in quotes
         channel: gmail_sms
         phone: '8055551212'
-        message: Call your dad to check on him
+        message: Call dad to check on him
       send_sms_change_batteries:
         days: all
         times: ['23:05']  # times must be in quotes
