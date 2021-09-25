@@ -43,7 +43,7 @@ vision, OpenCV, Numpy, pandas, and the PyZMQ messaging library. I use the
 Raspberry Pi GPIO Python module to control lights (e.g., to light the water
 meter) and irrigation valves.
 
-I currently have 4 repositories on GitHub:
+The Yin Yang Ranch project is made up of 4 repositories on GitHub:
 
 1. **yin-yang-ranch**: this repository. Overall project design and **librarian** prototype code.
 2. `imageZMQ: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
@@ -123,11 +123,11 @@ The project contains code repositories for each part of the design shown above:
   being developed.
 - **yin-yang-ranch** (*this GitHub repository*): contains overall project
   documentation and design. This repository also contains prototype Python
-  programs for the **librarian**, **commhub** and an example **commagent**. It
-  also contains example programs that monitor the health status of **imagenodes**.
-  It also contains example data in the test-data folder. That folder contains
-  real **imagehub** logs and captured images from my farm (including images of
-  coyotes, a bobcat, the mail truck and an Amazon delivery ;-)
+  programs for the **librarian**, **commhub** and an example **commagent**
+  (in the ``librarian-prototype`` folder). There is also example data from my
+  farm in the ``test-data`` folder. That folder contains **imagehub** logs
+  and captured images from my farm (including images of coyotes, a bobcat, the
+  mail truck and an Amazon delivery ;-)
 
 This distributed design allows each computer to do what it does best. A
 Raspberry Pi with a PiCamera can watch a water meter for needle motion, then
