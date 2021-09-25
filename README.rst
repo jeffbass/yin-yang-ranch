@@ -45,8 +45,7 @@ meter) and irrigation valves.
 
 I currently have 4 repositories on GitHub:
 
-1. **yin-yang-ranch**: this repository. Overall project design and goals.
-   It also cotains some of **librarian** prototype code.
+1. **yin-yang-ranch**: this repository. Overall project design and **librarian** prototype code.
 2. `imageZMQ: Transporting OpenCV images. <https://github.com/jeffbass/imagezmq>`_
 3. `imagenode: Capture and Send Images and Sensor Data. <https://github.com/jeffbass/imagenode>`_
 4. `imagehub: Receive and Store Images and Event Logs. <https://github.com/jeffbass/imagehub>`_
