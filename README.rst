@@ -253,9 +253,9 @@ The `imageZMQ repository <https://github.com/jeffbass/imagezmq>`_
 contains test programs that show how images can be sent from multiple Raspberry
 Pi computers simultaneously to a hub computer. The **imagenode** and **imagehub**
 programs are evolutions of the **imageZMQ** test programs
-`timing_send_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_send_jpg_buf.py>`_
+`timing_send_images.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_send_images.py>`_
 and
-`timing_receive_jpg_buf.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_jpg_buf.py>`_.
+`timing_receive_imnages.py <https://github.com/jeffbass/imagezmq/blob/master/tests/timing_receive_images.py>`_.
 The Python code in those two programs is a brief "pseudo code" outline for the
 code that is in the **imagenode** and **imagehub**
 programs.  Links to the full **imagenode** and **imagehub** repositories are
