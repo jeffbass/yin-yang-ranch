@@ -293,17 +293,4 @@ Acknowledgments and Thank Yous
   at `ZeroMQ.org <http://zeromq.org/>`_.
 - **OpenCV** and its Python bindings provide great scaffolding for computer
   vision projects large or small: `OpenCV.org <https://opencv.org/>`_.
-- **PyImageSearch.com** is the best resource for installing OpenCV and its Python
-  bindings. Adrian Rosebrock provides many practical OpenCV techniques with
-  tutorials, code examples, blogs
-  and books at `PyImageSearch.com <https://www.pyimagesearch.com/>`_. Installing
-  OpenCV on my Raspberry Pi computers, Macs and Linux boxes went from
-  frustrating to easy thanks to his tutorials. I also learned a **LOT** about
-  computer vision methods and techniques by taking his PyImageSearch Gurus
-  course. Highly recommended.
-- **imutils** is a collection of Python classes and methods that allows computer
-  vision programs using OpenCV to be cleaner and more compact. It has a very
-  helpful threaded image reader for Raspberry PiCamera modules or webcams. It
-  allowed me to shorten my camera reading programs on the Raspberry Pi by half:
-  `imutils on GitHub <https://github.com/jrosebr1/imutils>`_. **imutils** is an
-  open source project authored by Adrian Rosebrock.
+
