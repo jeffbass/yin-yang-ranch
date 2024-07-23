@@ -147,12 +147,12 @@ The system is written in Python and uses these packages. Higher versions will
 usually work fine, but these specific ones are known to work. See each specific
 repository above for more software details.
 
-- Python 3.6 and 3.7
+- Python 3.6 through 3.11
 - OpenCV 3.3 and 4.0+
-- Raspian Buster
+- Raspian OS Buster, Stretch and Raspbian Jessie using legacy PiCamera
+- Raspberry Pi OS Bookworm and Bullseye using PiCamera2
 - PyZMQ 20.0+
 - imagezmq 1.1.1+
-- imutils 0.4.3+ (used get to images from PiCamera)
 
 Hardware and Electronics
 ========================
@@ -160,7 +160,7 @@ Hardware and Electronics
 The project uses a wide variety of electronics hardware:
 
 - Raspberry Pi computers with both PiCameras and webcams.
-- Mac and Linux laptops (some with webcams as nodes).
+- Mac and Linux laptops (some with webcams as image nodes).
 - Temperature and humidity sensors.
 - Lighting control electronics (e.g., to light the water meter).
 - Motion detection sensors (both PIR and ultrasonic).
